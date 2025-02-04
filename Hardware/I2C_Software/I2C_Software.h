@@ -1,8 +1,8 @@
 #ifndef __I2C_SOFTWARE_H
 #define __I2C_SOFTWARE_H
 
+#include "stm32f10x.h"
 #include "stdint.h"
-
 
 #define APB2_GPIO RCC_APB2Periph_GPIOB // APB2外设
 #define GPIOX GPIOB                    // GPIOB端口
@@ -10,7 +10,6 @@
 #define SCL_Pin GPIO_Pin_8 // PB8 -> SCL
 #define SDA_Pin GPIO_Pin_9 // PB9 -> SDA
 
-                                                  
 #define I2C_ACK 0
 #define I2C_NO_ACK 1
 #define OLED_R_SDA() GPIO_ReadInputDataBit(GPIOX, SDA_Pin)
