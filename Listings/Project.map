@@ -4,51 +4,6 @@ Component: Arm Compiler for Embedded 6.22 Tool: armlink [5ee90200]
 
 Section Cross References
 
-    main.o(.text.main) refers to ti_msp_dl_config.o(.text.SYSCFG_DL_init) for SYSCFG_DL_init
-    main.o(.text.main) refers to main.o(.text.DL_GPIO_clearPins) for DL_GPIO_clearPins
-    main.o(.text.main) refers to delay.o(.text.delay_ms) for delay_ms
-    main.o(.text.main) refers to main.o(.text.DL_GPIO_setPins) for DL_GPIO_setPins
-    main.o(.ARM.exidx.text.main) refers to main.o(.text.main) for [Anonymous Symbol]
-    main.o(.ARM.exidx.text.DL_GPIO_clearPins) refers to main.o(.text.DL_GPIO_clearPins) for [Anonymous Symbol]
-    main.o(.ARM.exidx.text.DL_GPIO_setPins) refers to main.o(.text.DL_GPIO_setPins) for [Anonymous Symbol]
-    ti_msp_dl_config.o(.text.SYSCFG_DL_init) refers to ti_msp_dl_config.o(.text.SYSCFG_DL_initPower) for SYSCFG_DL_initPower
-    ti_msp_dl_config.o(.text.SYSCFG_DL_init) refers to ti_msp_dl_config.o(.text.SYSCFG_DL_GPIO_init) for SYSCFG_DL_GPIO_init
-    ti_msp_dl_config.o(.text.SYSCFG_DL_init) refers to ti_msp_dl_config.o(.text.SYSCFG_DL_SYSCTL_init) for SYSCFG_DL_SYSCTL_init
-    ti_msp_dl_config.o(.ARM.exidx.text.SYSCFG_DL_init) refers to ti_msp_dl_config.o(.text.SYSCFG_DL_init) for [Anonymous Symbol]
-    ti_msp_dl_config.o(.text.SYSCFG_DL_initPower) refers to ti_msp_dl_config.o(.text.DL_GPIO_reset) for DL_GPIO_reset
-    ti_msp_dl_config.o(.text.SYSCFG_DL_initPower) refers to ti_msp_dl_config.o(.text.DL_GPIO_enablePower) for DL_GPIO_enablePower
-    ti_msp_dl_config.o(.text.SYSCFG_DL_initPower) refers to dl_common.o(.text.DL_Common_delayCycles) for DL_Common_delayCycles
-    ti_msp_dl_config.o(.ARM.exidx.text.SYSCFG_DL_initPower) refers to ti_msp_dl_config.o(.text.SYSCFG_DL_initPower) for [Anonymous Symbol]
-    ti_msp_dl_config.o(.text.SYSCFG_DL_GPIO_init) refers to ti_msp_dl_config.o(.text.DL_GPIO_initDigitalOutput) for DL_GPIO_initDigitalOutput
-    ti_msp_dl_config.o(.text.SYSCFG_DL_GPIO_init) refers to ti_msp_dl_config.o(.text.DL_GPIO_setPins) for DL_GPIO_setPins
-    ti_msp_dl_config.o(.text.SYSCFG_DL_GPIO_init) refers to ti_msp_dl_config.o(.text.DL_GPIO_enableOutput) for DL_GPIO_enableOutput
-    ti_msp_dl_config.o(.ARM.exidx.text.SYSCFG_DL_GPIO_init) refers to ti_msp_dl_config.o(.text.SYSCFG_DL_GPIO_init) for [Anonymous Symbol]
-    ti_msp_dl_config.o(.text.SYSCFG_DL_SYSCTL_init) refers to ti_msp_dl_config.o(.text.DL_SYSCTL_setBORThreshold) for DL_SYSCTL_setBORThreshold
-    ti_msp_dl_config.o(.text.SYSCFG_DL_SYSCTL_init) refers to ti_msp_dl_config.o(.text.DL_SYSCTL_setSYSOSCFreq) for DL_SYSCTL_setSYSOSCFreq
-    ti_msp_dl_config.o(.text.SYSCFG_DL_SYSCTL_init) refers to ti_msp_dl_config.o(.text.DL_SYSCTL_disableHFXT) for DL_SYSCTL_disableHFXT
-    ti_msp_dl_config.o(.text.SYSCFG_DL_SYSCTL_init) refers to ti_msp_dl_config.o(.text.DL_SYSCTL_disableSYSPLL) for DL_SYSCTL_disableSYSPLL
-    ti_msp_dl_config.o(.text.SYSCFG_DL_SYSCTL_init) refers to ti_msp_dl_config.o(.text.DL_SYSCTL_setULPCLKDivider) for DL_SYSCTL_setULPCLKDivider
-    ti_msp_dl_config.o(.text.SYSCFG_DL_SYSCTL_init) refers to ti_msp_dl_config.o(.text.DL_SYSCTL_setMCLKDivider) for DL_SYSCTL_setMCLKDivider
-    ti_msp_dl_config.o(.ARM.exidx.text.SYSCFG_DL_SYSCTL_init) refers to ti_msp_dl_config.o(.text.SYSCFG_DL_SYSCTL_init) for [Anonymous Symbol]
-    ti_msp_dl_config.o(.ARM.exidx.text.DL_GPIO_reset) refers to ti_msp_dl_config.o(.text.DL_GPIO_reset) for [Anonymous Symbol]
-    ti_msp_dl_config.o(.ARM.exidx.text.DL_GPIO_enablePower) refers to ti_msp_dl_config.o(.text.DL_GPIO_enablePower) for [Anonymous Symbol]
-    ti_msp_dl_config.o(.ARM.exidx.text.DL_GPIO_initDigitalOutput) refers to ti_msp_dl_config.o(.text.DL_GPIO_initDigitalOutput) for [Anonymous Symbol]
-    ti_msp_dl_config.o(.ARM.exidx.text.DL_GPIO_setPins) refers to ti_msp_dl_config.o(.text.DL_GPIO_setPins) for [Anonymous Symbol]
-    ti_msp_dl_config.o(.ARM.exidx.text.DL_GPIO_enableOutput) refers to ti_msp_dl_config.o(.text.DL_GPIO_enableOutput) for [Anonymous Symbol]
-    ti_msp_dl_config.o(.ARM.exidx.text.DL_SYSCTL_setBORThreshold) refers to ti_msp_dl_config.o(.text.DL_SYSCTL_setBORThreshold) for [Anonymous Symbol]
-    ti_msp_dl_config.o(.text.DL_SYSCTL_setSYSOSCFreq) refers to ti_msp_dl_config.o(.text.DL_Common_updateReg) for DL_Common_updateReg
-    ti_msp_dl_config.o(.ARM.exidx.text.DL_SYSCTL_setSYSOSCFreq) refers to ti_msp_dl_config.o(.text.DL_SYSCTL_setSYSOSCFreq) for [Anonymous Symbol]
-    ti_msp_dl_config.o(.ARM.exidx.text.DL_SYSCTL_disableHFXT) refers to ti_msp_dl_config.o(.text.DL_SYSCTL_disableHFXT) for [Anonymous Symbol]
-    ti_msp_dl_config.o(.ARM.exidx.text.DL_SYSCTL_disableSYSPLL) refers to ti_msp_dl_config.o(.text.DL_SYSCTL_disableSYSPLL) for [Anonymous Symbol]
-    ti_msp_dl_config.o(.text.DL_SYSCTL_setULPCLKDivider) refers to ti_msp_dl_config.o(.text.DL_Common_updateReg) for DL_Common_updateReg
-    ti_msp_dl_config.o(.ARM.exidx.text.DL_SYSCTL_setULPCLKDivider) refers to ti_msp_dl_config.o(.text.DL_SYSCTL_setULPCLKDivider) for [Anonymous Symbol]
-    ti_msp_dl_config.o(.text.DL_SYSCTL_setMCLKDivider) refers to ti_msp_dl_config.o(.text.DL_Common_updateReg) for DL_Common_updateReg
-    ti_msp_dl_config.o(.ARM.exidx.text.DL_SYSCTL_setMCLKDivider) refers to ti_msp_dl_config.o(.text.DL_SYSCTL_setMCLKDivider) for [Anonymous Symbol]
-    ti_msp_dl_config.o(.ARM.exidx.text.DL_Common_updateReg) refers to ti_msp_dl_config.o(.text.DL_Common_updateReg) for [Anonymous Symbol]
-    delay.o(.text.delay_us) refers to dl_common.o(.text.DL_Common_delayCycles) for DL_Common_delayCycles
-    delay.o(.ARM.exidx.text.delay_us) refers to delay.o(.text.delay_us) for [Anonymous Symbol]
-    delay.o(.text.delay_ms) refers to dl_common.o(.text.DL_Common_delayCycles) for DL_Common_delayCycles
-    delay.o(.ARM.exidx.text.delay_ms) refers to delay.o(.text.delay_ms) for [Anonymous Symbol]
     dl_adc12.o(.text.DL_ADC12_setClockConfig) refers to dl_adc12.o(.text.DL_Common_updateReg) for DL_Common_updateReg
     dl_adc12.o(.ARM.exidx.text.DL_ADC12_setClockConfig) refers to dl_adc12.o(.text.DL_ADC12_setClockConfig) for [Anonymous Symbol]
     dl_adc12.o(.ARM.exidx.text.DL_Common_updateReg) refers to dl_adc12.o(.text.DL_Common_updateReg) for [Anonymous Symbol]
@@ -1212,7 +1167,112 @@ Section Cross References
     startup_mspm0g350x_uvision.o(.text) refers to __main.o(!!!main) for __main
     startup_mspm0g350x_uvision.o(.text) refers to startup_mspm0g350x_uvision.o(HEAP) for Heap_Mem
     startup_mspm0g350x_uvision.o(.text) refers to startup_mspm0g350x_uvision.o(STACK) for Stack_Mem
+    delay.o(.text.delay_us) refers to dl_common.o(.text.DL_Common_delayCycles) for DL_Common_delayCycles
+    delay.o(.ARM.exidx.text.delay_us) refers to delay.o(.text.delay_us) for [Anonymous Symbol]
+    delay.o(.text.delay_ms) refers to dl_common.o(.text.DL_Common_delayCycles) for DL_Common_delayCycles
+    delay.o(.ARM.exidx.text.delay_ms) refers to delay.o(.text.delay_ms) for [Anonymous Symbol]
+    pid.o(.ARM.exidx.text.PID_Init) refers to pid.o(.text.PID_Init) for [Anonymous Symbol]
+    pid.o(.ARM.exidx.text.PID_ResetTarget) refers to pid.o(.text.PID_ResetTarget) for [Anonymous Symbol]
+    pid.o(.ARM.exidx.text.PID_Reset_pid) refers to pid.o(.text.PID_Reset_pid) for [Anonymous Symbol]
+    pid.o(.text.PID_Compute) refers to faddsub.o(x$fpl$fsub) for __aeabi_fsub
+    pid.o(.text.PID_Compute) refers to faddsub.o(x$fpl$fadd) for __aeabi_fadd
+    pid.o(.text.PID_Compute) refers to fmul.o(x$fpl$fmul) for __aeabi_fmul
+    pid.o(.text.PID_Compute) refers to fcmp.o(i._fleq) for __aeabi_fcmple
+    pid.o(.text.PID_Compute) refers to fcmp.o(i._fgeq) for __aeabi_fcmpge
+    pid.o(.ARM.exidx.text.PID_Compute) refers to pid.o(.text.PID_Compute) for [Anonymous Symbol]
+    pid.o(.ARM.exidx.text.IncPID_Init) refers to pid.o(.text.IncPID_Init) for [Anonymous Symbol]
+    pid.o(.ARM.exidx.text.IncPID_ResetTarget) refers to pid.o(.text.IncPID_ResetTarget) for [Anonymous Symbol]
+    pid.o(.ARM.exidx.text.IncPID_Reset_pid) refers to pid.o(.text.IncPID_Reset_pid) for [Anonymous Symbol]
+    pid.o(.text.IncPID_Compute) refers to faddsub.o(x$fpl$fsub) for __aeabi_fsub
+    pid.o(.text.IncPID_Compute) refers to fmul.o(x$fpl$fmul) for __aeabi_fmul
+    pid.o(.text.IncPID_Compute) refers to faddsub.o(x$fpl$fadd) for __aeabi_fadd
+    pid.o(.text.IncPID_Compute) refers to fcmp.o(i._fleq) for __aeabi_fcmple
+    pid.o(.text.IncPID_Compute) refers to fcmp.o(i._fgeq) for __aeabi_fcmpge
+    pid.o(.ARM.exidx.text.IncPID_Compute) refers to pid.o(.text.IncPID_Compute) for [Anonymous Symbol]
+    pid.o(.text.EWMA_filter) refers to fmul.o(x$fpl$fmul) for __aeabi_fmul
+    pid.o(.text.EWMA_filter) refers to f2d.o(.text) for __aeabi_f2d
+    pid.o(.text.EWMA_filter) refers to daddsub.o(.text) for __aeabi_dsub
+    pid.o(.text.EWMA_filter) refers to dmul.o(.text) for __aeabi_dmul
+    pid.o(.text.EWMA_filter) refers to d2f.o(.text) for __aeabi_d2f
+    pid.o(.ARM.exidx.text.EWMA_filter) refers to pid.o(.text.EWMA_filter) for [Anonymous Symbol]
+    main.o(.text.main) refers to ti_msp_dl_config.o(.text.SYSCFG_DL_init) for SYSCFG_DL_init
+    main.o(.text.main) refers to main.o(.text.DL_GPIO_clearPins) for DL_GPIO_clearPins
+    main.o(.text.main) refers to delay.o(.text.delay_ms) for delay_ms
+    main.o(.text.main) refers to main.o(.text.DL_GPIO_setPins) for DL_GPIO_setPins
+    main.o(.ARM.exidx.text.main) refers to main.o(.text.main) for [Anonymous Symbol]
+    main.o(.ARM.exidx.text.DL_GPIO_clearPins) refers to main.o(.text.DL_GPIO_clearPins) for [Anonymous Symbol]
+    main.o(.ARM.exidx.text.DL_GPIO_setPins) refers to main.o(.text.DL_GPIO_setPins) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.text.SYSCFG_DL_init) refers to ti_msp_dl_config.o(.text.SYSCFG_DL_initPower) for SYSCFG_DL_initPower
+    ti_msp_dl_config.o(.text.SYSCFG_DL_init) refers to ti_msp_dl_config.o(.text.SYSCFG_DL_GPIO_init) for SYSCFG_DL_GPIO_init
+    ti_msp_dl_config.o(.text.SYSCFG_DL_init) refers to ti_msp_dl_config.o(.text.SYSCFG_DL_SYSCTL_init) for SYSCFG_DL_SYSCTL_init
+    ti_msp_dl_config.o(.ARM.exidx.text.SYSCFG_DL_init) refers to ti_msp_dl_config.o(.text.SYSCFG_DL_init) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.text.SYSCFG_DL_initPower) refers to ti_msp_dl_config.o(.text.DL_GPIO_reset) for DL_GPIO_reset
+    ti_msp_dl_config.o(.text.SYSCFG_DL_initPower) refers to ti_msp_dl_config.o(.text.DL_GPIO_enablePower) for DL_GPIO_enablePower
+    ti_msp_dl_config.o(.text.SYSCFG_DL_initPower) refers to dl_common.o(.text.DL_Common_delayCycles) for DL_Common_delayCycles
+    ti_msp_dl_config.o(.ARM.exidx.text.SYSCFG_DL_initPower) refers to ti_msp_dl_config.o(.text.SYSCFG_DL_initPower) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.text.SYSCFG_DL_GPIO_init) refers to ti_msp_dl_config.o(.text.DL_GPIO_initDigitalOutput) for DL_GPIO_initDigitalOutput
+    ti_msp_dl_config.o(.text.SYSCFG_DL_GPIO_init) refers to ti_msp_dl_config.o(.text.DL_GPIO_setPins) for DL_GPIO_setPins
+    ti_msp_dl_config.o(.text.SYSCFG_DL_GPIO_init) refers to ti_msp_dl_config.o(.text.DL_GPIO_enableOutput) for DL_GPIO_enableOutput
+    ti_msp_dl_config.o(.ARM.exidx.text.SYSCFG_DL_GPIO_init) refers to ti_msp_dl_config.o(.text.SYSCFG_DL_GPIO_init) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.text.SYSCFG_DL_SYSCTL_init) refers to ti_msp_dl_config.o(.text.DL_SYSCTL_setBORThreshold) for DL_SYSCTL_setBORThreshold
+    ti_msp_dl_config.o(.text.SYSCFG_DL_SYSCTL_init) refers to ti_msp_dl_config.o(.text.DL_SYSCTL_setSYSOSCFreq) for DL_SYSCTL_setSYSOSCFreq
+    ti_msp_dl_config.o(.text.SYSCFG_DL_SYSCTL_init) refers to ti_msp_dl_config.o(.text.DL_SYSCTL_disableHFXT) for DL_SYSCTL_disableHFXT
+    ti_msp_dl_config.o(.text.SYSCFG_DL_SYSCTL_init) refers to ti_msp_dl_config.o(.text.DL_SYSCTL_disableSYSPLL) for DL_SYSCTL_disableSYSPLL
+    ti_msp_dl_config.o(.text.SYSCFG_DL_SYSCTL_init) refers to ti_msp_dl_config.o(.text.DL_SYSCTL_setULPCLKDivider) for DL_SYSCTL_setULPCLKDivider
+    ti_msp_dl_config.o(.text.SYSCFG_DL_SYSCTL_init) refers to ti_msp_dl_config.o(.text.DL_SYSCTL_setMCLKDivider) for DL_SYSCTL_setMCLKDivider
+    ti_msp_dl_config.o(.ARM.exidx.text.SYSCFG_DL_SYSCTL_init) refers to ti_msp_dl_config.o(.text.SYSCFG_DL_SYSCTL_init) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.ARM.exidx.text.DL_GPIO_reset) refers to ti_msp_dl_config.o(.text.DL_GPIO_reset) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.ARM.exidx.text.DL_GPIO_enablePower) refers to ti_msp_dl_config.o(.text.DL_GPIO_enablePower) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.ARM.exidx.text.DL_GPIO_initDigitalOutput) refers to ti_msp_dl_config.o(.text.DL_GPIO_initDigitalOutput) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.ARM.exidx.text.DL_GPIO_setPins) refers to ti_msp_dl_config.o(.text.DL_GPIO_setPins) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.ARM.exidx.text.DL_GPIO_enableOutput) refers to ti_msp_dl_config.o(.text.DL_GPIO_enableOutput) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.ARM.exidx.text.DL_SYSCTL_setBORThreshold) refers to ti_msp_dl_config.o(.text.DL_SYSCTL_setBORThreshold) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.text.DL_SYSCTL_setSYSOSCFreq) refers to ti_msp_dl_config.o(.text.DL_Common_updateReg) for DL_Common_updateReg
+    ti_msp_dl_config.o(.ARM.exidx.text.DL_SYSCTL_setSYSOSCFreq) refers to ti_msp_dl_config.o(.text.DL_SYSCTL_setSYSOSCFreq) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.ARM.exidx.text.DL_SYSCTL_disableHFXT) refers to ti_msp_dl_config.o(.text.DL_SYSCTL_disableHFXT) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.ARM.exidx.text.DL_SYSCTL_disableSYSPLL) refers to ti_msp_dl_config.o(.text.DL_SYSCTL_disableSYSPLL) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.text.DL_SYSCTL_setULPCLKDivider) refers to ti_msp_dl_config.o(.text.DL_Common_updateReg) for DL_Common_updateReg
+    ti_msp_dl_config.o(.ARM.exidx.text.DL_SYSCTL_setULPCLKDivider) refers to ti_msp_dl_config.o(.text.DL_SYSCTL_setULPCLKDivider) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.text.DL_SYSCTL_setMCLKDivider) refers to ti_msp_dl_config.o(.text.DL_Common_updateReg) for DL_Common_updateReg
+    ti_msp_dl_config.o(.ARM.exidx.text.DL_SYSCTL_setMCLKDivider) refers to ti_msp_dl_config.o(.text.DL_SYSCTL_setMCLKDivider) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.ARM.exidx.text.DL_Common_updateReg) refers to ti_msp_dl_config.o(.text.DL_Common_updateReg) for [Anonymous Symbol]
     __main.o(!!!main) refers to __rtentry.o(.ARM.Collect$$rtentry$$00000000) for __rt_entry
+    d2f.o(.text) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    daddsub.o(.text) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    dmul.o(.text) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    f2d.o(.text) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    faddsub.o(x$fpl$fadd) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    faddsub.o(x$fpl$fadd) refers to faddsub.o(x$fpl$fsub) for _fsub1
+    faddsub.o(x$fpl$frsb) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    faddsub.o(x$fpl$frsb) refers to faddsub.o(x$fpl$fsub) for _fsub1
+    faddsub.o(x$fpl$frsb) refers to faddsub.o(x$fpl$fadd) for _fadd1
+    faddsub.o(x$fpl$fsub) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    faddsub.o(x$fpl$fsub) refers to faddsub.o(x$fpl$fadd) for _fadd1
+    fcmp.o(i.__eqsf2) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    fcmp.o(i.__eqsf2) refers to feqf.o(x$fpl$feqf) for _fcmpeq
+    fcmp.o(i.__gesf2) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    fcmp.o(i.__gesf2) refers to fgef.o(x$fpl$fgeqf) for _fcmpge
+    fcmp.o(i.__gtsf2) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    fcmp.o(i.__gtsf2) refers to fgef.o(x$fpl$fgeqf) for _fcmpge
+    fcmp.o(i.__lesf2) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    fcmp.o(i.__lesf2) refers to flef.o(x$fpl$fleqf) for _fcmple
+    fcmp.o(i.__ltsf2) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    fcmp.o(i.__ltsf2) refers to flef.o(x$fpl$fleqf) for _fcmple
+    fcmp.o(i.__nesf2) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    fcmp.o(i.__nesf2) refers to feqf.o(x$fpl$feqf) for _fcmpeq
+    fcmp.o(i._feq) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    fcmp.o(i._feq) refers to feqf.o(x$fpl$feqf) for _fcmpeq
+    fcmp.o(i._fgeq) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    fcmp.o(i._fgeq) refers to fgef.o(x$fpl$fgeqf) for _fcmpge
+    fcmp.o(i._fgr) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    fcmp.o(i._fgr) refers to fgef.o(x$fpl$fgeqf) for _fcmpge
+    fcmp.o(i._fleq) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    fcmp.o(i._fleq) refers to flef.o(x$fpl$fleqf) for _fcmple
+    fcmp.o(i._fls) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    fcmp.o(i._fls) refers to flef.o(x$fpl$fleqf) for _fcmple
+    fcmp.o(i._fneq) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    fcmp.o(i._fneq) refers to feqf.o(x$fpl$feqf) for _fcmpeq
+    fmul.o(x$fpl$fmul) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
     __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$0000000A) for __rt_entry_li
     __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) for __rt_entry_main
     __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$0000000C) for __rt_entry_postli_1
@@ -1220,6 +1280,12 @@ Section Cross References
     __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$00000002) for __rt_entry_presh_1
     __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry4.o(.ARM.Collect$$rtentry$$00000004) for __rt_entry_sh
     aeabi_idiv0_sigfpe.o(.text) refers to rt_div0.o(.text) for __rt_div0
+    feqf.o(x$fpl$feqf) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    feqf.o(x$fpl$feqf) refers to fcmpin.o(.text) for __fpl_fcmp_InfNaN
+    fgef.o(x$fpl$fgeqf) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    fgef.o(x$fpl$fgeqf) refers to fcmpin.o(.text) for __fpl_fcmp_InfNaN
+    flef.o(x$fpl$fleqf) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    flef.o(x$fpl$fleqf) refers to fcmpin.o(.text) for __fpl_fcmp_InfNaN
     __rtentry2.o(.ARM.Collect$$rtentry$$00000008) refers to boardinit2.o(.text) for _platform_post_stackheap_init
     __rtentry2.o(.ARM.Collect$$rtentry$$0000000A) refers to libinit.o(.ARM.Collect$$libinit$$00000000) for __rt_lib_init
     __rtentry2.o(.ARM.Collect$$rtentry$$0000000B) refers to boardinit3.o(.text) for _platform_post_lib_init
@@ -1233,6 +1299,9 @@ Section Cross References
     __rtentry4.o(.ARM.Collect$$rtentry$$00000004) refers to sys_stackheap_outer.o(.text) for __user_setup_stackheap
     __rtentry4.o(.ARM.exidx) refers to __rtentry4.o(.ARM.Collect$$rtentry$$00000004) for .ARM.Collect$$rtentry$$00000004
     rt_div0.o(.text) refers to defsig_fpe_outer.o(.text) for __rt_SIGFPE
+    fcmpin.o(.text) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    fcmpin.o(.text) refers to cmpret.o(.text) for __fpl_cmpreturn
+    fcmpin.o(.text) refers to fnan2.o(.text) for __fpl_fcheck_NaN2
     sys_stackheap_outer.o(.text) refers to libspace.o(.text) for __user_perproc_libspace
     sys_stackheap_outer.o(.text) refers to startup_mspm0g350x_uvision.o(.text) for __user_initial_stackheap
     sys_stackheap_outer.o(__vectab_stack_and_reset_area) refers to tempstk.o(.text) for __temporary_stack_top
@@ -1263,6 +1332,9 @@ Section Cross References
     libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000001F) for __rt_lib_init_signal_1
     libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000027) for __rt_lib_init_stdio_1
     libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000000E) for __rt_lib_init_user_alloc_1
+    cmpret.o(.text) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    fnan2.o(.text) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    fnan2.o(.text) refers to retnan.o(.text) for __fpl_return_NaN
     libspace.o(.text) refers to libspace.o(.bss) for __libspace_start
     rtexit.o(.ARM.Collect$$rtexit$$00000000) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000004) for __rt_exit_exit
     rtexit.o(.ARM.Collect$$rtexit$$00000000) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000003) for __rt_exit_ls
@@ -1282,6 +1354,8 @@ Section Cross References
     libinit2.o(.ARM.Collect$$libinit$$0000001A) refers to libinit2.o(.ARM.Collect$$libinit$$00000011) for .ARM.Collect$$libinit$$00000011
     libinit2.o(.ARM.Collect$$libinit$$00000028) refers to argv_veneer.o(.text) for __ARM_argv_veneer
     libinit2.o(.ARM.Collect$$libinit$$00000029) refers to argv_veneer.o(.text) for __ARM_argv_veneer
+    retnan.o(.text) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    retnan.o(.text) refers to cmpret.o(.text) for __fpl_cmpreturn
     sys_exit.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
     sys_exit.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
     sys_exit_hlt.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
@@ -1330,32 +1404,6 @@ Section Cross References
 
 Removing Unused input sections from the image.
 
-    Removing main.o(.text), (0 bytes).
-    Removing main.o(.ARM.exidx.text.main), (8 bytes).
-    Removing main.o(.ARM.exidx.text.DL_GPIO_clearPins), (8 bytes).
-    Removing main.o(.ARM.exidx.text.DL_GPIO_setPins), (8 bytes).
-    Removing main.o(.ARM.use_no_argv), (4 bytes).
-    Removing ti_msp_dl_config.o(.text), (0 bytes).
-    Removing ti_msp_dl_config.o(.ARM.exidx.text.SYSCFG_DL_init), (8 bytes).
-    Removing ti_msp_dl_config.o(.ARM.exidx.text.SYSCFG_DL_initPower), (8 bytes).
-    Removing ti_msp_dl_config.o(.ARM.exidx.text.SYSCFG_DL_GPIO_init), (8 bytes).
-    Removing ti_msp_dl_config.o(.ARM.exidx.text.SYSCFG_DL_SYSCTL_init), (8 bytes).
-    Removing ti_msp_dl_config.o(.ARM.exidx.text.DL_GPIO_reset), (8 bytes).
-    Removing ti_msp_dl_config.o(.ARM.exidx.text.DL_GPIO_enablePower), (8 bytes).
-    Removing ti_msp_dl_config.o(.ARM.exidx.text.DL_GPIO_initDigitalOutput), (8 bytes).
-    Removing ti_msp_dl_config.o(.ARM.exidx.text.DL_GPIO_setPins), (8 bytes).
-    Removing ti_msp_dl_config.o(.ARM.exidx.text.DL_GPIO_enableOutput), (8 bytes).
-    Removing ti_msp_dl_config.o(.ARM.exidx.text.DL_SYSCTL_setBORThreshold), (8 bytes).
-    Removing ti_msp_dl_config.o(.ARM.exidx.text.DL_SYSCTL_setSYSOSCFreq), (8 bytes).
-    Removing ti_msp_dl_config.o(.ARM.exidx.text.DL_SYSCTL_disableHFXT), (8 bytes).
-    Removing ti_msp_dl_config.o(.ARM.exidx.text.DL_SYSCTL_disableSYSPLL), (8 bytes).
-    Removing ti_msp_dl_config.o(.ARM.exidx.text.DL_SYSCTL_setULPCLKDivider), (8 bytes).
-    Removing ti_msp_dl_config.o(.ARM.exidx.text.DL_SYSCTL_setMCLKDivider), (8 bytes).
-    Removing ti_msp_dl_config.o(.ARM.exidx.text.DL_Common_updateReg), (8 bytes).
-    Removing delay.o(.text), (0 bytes).
-    Removing delay.o(.text.delay_us), (32 bytes).
-    Removing delay.o(.ARM.exidx.text.delay_us), (8 bytes).
-    Removing delay.o(.ARM.exidx.text.delay_ms), (8 bytes).
     Removing dl_adc12.o(.text), (0 bytes).
     Removing dl_adc12.o(.text.DL_ADC12_setClockConfig), (76 bytes).
     Removing dl_adc12.o(.ARM.exidx.text.DL_ADC12_setClockConfig), (8 bytes).
@@ -2422,8 +2470,53 @@ Removing Unused input sections from the image.
     Removing dl_sysctl_mspm0g1x0x_g3x0x.o(.ARM.exidx.text.DL_SYSCTL_getPowerPolicySTOP), (8 bytes).
     Removing dl_sysctl_mspm0g1x0x_g3x0x.o(.text.DL_SYSCTL_getPowerPolicySTANDBY), (80 bytes).
     Removing dl_sysctl_mspm0g1x0x_g3x0x.o(.ARM.exidx.text.DL_SYSCTL_getPowerPolicySTANDBY), (8 bytes).
+    Removing delay.o(.text), (0 bytes).
+    Removing delay.o(.text.delay_us), (32 bytes).
+    Removing delay.o(.ARM.exidx.text.delay_us), (8 bytes).
+    Removing delay.o(.ARM.exidx.text.delay_ms), (8 bytes).
+    Removing pid.o(.text), (0 bytes).
+    Removing pid.o(.text.PID_Init), (88 bytes).
+    Removing pid.o(.ARM.exidx.text.PID_Init), (8 bytes).
+    Removing pid.o(.text.PID_ResetTarget), (16 bytes).
+    Removing pid.o(.ARM.exidx.text.PID_ResetTarget), (8 bytes).
+    Removing pid.o(.text.PID_Reset_pid), (64 bytes).
+    Removing pid.o(.ARM.exidx.text.PID_Reset_pid), (8 bytes).
+    Removing pid.o(.text.PID_Compute), (216 bytes).
+    Removing pid.o(.ARM.exidx.text.PID_Compute), (8 bytes).
+    Removing pid.o(.text.IncPID_Init), (76 bytes).
+    Removing pid.o(.ARM.exidx.text.IncPID_Init), (8 bytes).
+    Removing pid.o(.text.IncPID_ResetTarget), (16 bytes).
+    Removing pid.o(.ARM.exidx.text.IncPID_ResetTarget), (8 bytes).
+    Removing pid.o(.text.IncPID_Reset_pid), (64 bytes).
+    Removing pid.o(.ARM.exidx.text.IncPID_Reset_pid), (8 bytes).
+    Removing pid.o(.text.IncPID_Compute), (206 bytes).
+    Removing pid.o(.ARM.exidx.text.IncPID_Compute), (8 bytes).
+    Removing pid.o(.text.EWMA_filter), (92 bytes).
+    Removing pid.o(.ARM.exidx.text.EWMA_filter), (8 bytes).
+    Removing main.o(.text), (0 bytes).
+    Removing main.o(.ARM.exidx.text.main), (8 bytes).
+    Removing main.o(.ARM.exidx.text.DL_GPIO_clearPins), (8 bytes).
+    Removing main.o(.ARM.exidx.text.DL_GPIO_setPins), (8 bytes).
+    Removing main.o(.ARM.use_no_argv), (4 bytes).
+    Removing ti_msp_dl_config.o(.text), (0 bytes).
+    Removing ti_msp_dl_config.o(.ARM.exidx.text.SYSCFG_DL_init), (8 bytes).
+    Removing ti_msp_dl_config.o(.ARM.exidx.text.SYSCFG_DL_initPower), (8 bytes).
+    Removing ti_msp_dl_config.o(.ARM.exidx.text.SYSCFG_DL_GPIO_init), (8 bytes).
+    Removing ti_msp_dl_config.o(.ARM.exidx.text.SYSCFG_DL_SYSCTL_init), (8 bytes).
+    Removing ti_msp_dl_config.o(.ARM.exidx.text.DL_GPIO_reset), (8 bytes).
+    Removing ti_msp_dl_config.o(.ARM.exidx.text.DL_GPIO_enablePower), (8 bytes).
+    Removing ti_msp_dl_config.o(.ARM.exidx.text.DL_GPIO_initDigitalOutput), (8 bytes).
+    Removing ti_msp_dl_config.o(.ARM.exidx.text.DL_GPIO_setPins), (8 bytes).
+    Removing ti_msp_dl_config.o(.ARM.exidx.text.DL_GPIO_enableOutput), (8 bytes).
+    Removing ti_msp_dl_config.o(.ARM.exidx.text.DL_SYSCTL_setBORThreshold), (8 bytes).
+    Removing ti_msp_dl_config.o(.ARM.exidx.text.DL_SYSCTL_setSYSOSCFreq), (8 bytes).
+    Removing ti_msp_dl_config.o(.ARM.exidx.text.DL_SYSCTL_disableHFXT), (8 bytes).
+    Removing ti_msp_dl_config.o(.ARM.exidx.text.DL_SYSCTL_disableSYSPLL), (8 bytes).
+    Removing ti_msp_dl_config.o(.ARM.exidx.text.DL_SYSCTL_setULPCLKDivider), (8 bytes).
+    Removing ti_msp_dl_config.o(.ARM.exidx.text.DL_SYSCTL_setMCLKDivider), (8 bytes).
+    Removing ti_msp_dl_config.o(.ARM.exidx.text.DL_Common_updateReg), (8 bytes).
 
-1092 unused section(s) (total 40860 bytes) removed from the image.
+1111 unused section(s) (total 41770 bytes) removed from the image.
 
 ==============================================================================
 
@@ -2489,8 +2582,24 @@ Image Symbol Table
     ../clib/signal.c                         0x00000000   Number         0  defsig_other.o ABSOLUTE
     ../clib/signal.s                         0x00000000   Number         0  defsig.o ABSOLUTE
     ../clib/stdlib.c                         0x00000000   Number         0  exit.o ABSOLUTE
+    ../fplib/cfplib/cmp.c                    0x00000000   Number         0  fcmp.o ABSOLUTE
+    ../fplib/cfplib/cmpret.c                 0x00000000   Number         0  cmpret.o ABSOLUTE
+    ../fplib/cfplib/d2f.c                    0x00000000   Number         0  d2f.o ABSOLUTE
+    ../fplib/cfplib/daddsub.c                0x00000000   Number         0  daddsub.o ABSOLUTE
+    ../fplib/cfplib/dmul.c                   0x00000000   Number         0  dmul.o ABSOLUTE
+    ../fplib/cfplib/f2d.c                    0x00000000   Number         0  f2d.o ABSOLUTE
+    ../fplib/cfplib/fcmpin.c                 0x00000000   Number         0  fcmpin.o ABSOLUTE
     ../fplib/cfplib/fpinit.c                 0x00000000   Number         0  fpinit.o ABSOLUTE
+    ../fplib/cfplib/nan2.c                   0x00000000   Number         0  fnan2.o ABSOLUTE
+    ../fplib/cfplib/retnan.c                 0x00000000   Number         0  retnan.o ABSOLUTE
+    ../fplib/faddsub6m.s                     0x00000000   Number         0  faddsub.o ABSOLUTE
+    ../fplib/feqf6m.s                        0x00000000   Number         0  feqf.o ABSOLUTE
+    ../fplib/fgeqf6m.s                       0x00000000   Number         0  fgef.o ABSOLUTE
+    ../fplib/fleqf6m.s                       0x00000000   Number         0  flef.o ABSOLUTE
+    ../fplib/fmul6m.s                        0x00000000   Number         0  fmul.o ABSOLUTE
+    ../fplib/usenofp.s                       0x00000000   Number         0  usenofp.o ABSOLUTE
     Delay.c                                  0x00000000   Number         0  delay.o ABSOLUTE
+    PID.c                                    0x00000000   Number         0  pid.o ABSOLUTE
     Start/startup_mspm0g350x_uvision.s       0x00000000   Number         0  startup_mspm0g350x_uvision.o ABSOLUTE
     dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
     dl_adc12.c                               0x00000000   Number         0  dl_adc12.o ABSOLUTE
@@ -2784,99 +2893,99 @@ Memory Map of the image
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x00000000   0x00000000   0x000000c0   Data   RO         1248    RESET               startup_mspm0g350x_uvision.o
-    0x000000c0   0x000000c0   0x00000008   Code   RO         1263  * !!!main             c_p.l(__main.o)
-    0x000000c8   0x000000c8   0x00000054   Code   RO         1440    !!!scatter          c_p.l(__scatter.o)
+    0x00000000   0x00000000   0x000000c0   Data   RO         1184    RESET               startup_mspm0g350x_uvision.o
+    0x000000c0   0x000000c0   0x00000008   Code   RO         1288  * !!!main             c_p.l(__main.o)
+    0x000000c8   0x000000c8   0x00000054   Code   RO         1520    !!!scatter          c_p.l(__scatter.o)
     0x0000011c   0x0000011c   0x00000004   PAD
-    0x00000120   0x00000120   0x00000002   Code   RO         1441    !!handler_null      c_p.l(__scatter.o)
+    0x00000120   0x00000120   0x00000002   Code   RO         1521    !!handler_null      c_p.l(__scatter.o)
     0x00000122   0x00000122   0x00000006   PAD
-    0x00000128   0x00000128   0x0000001c   Code   RO         1444    !!handler_zi        c_p.l(__scatter_zi.o)
-    0x00000144   0x00000144   0x00000002   Code   RO         1301    .ARM.Collect$$libinit$$00000000  c_p.l(libinit.o)
-    0x00000146   0x00000146   0x00000000   Code   RO         1315    .ARM.Collect$$libinit$$00000002  c_p.l(libinit2.o)
-    0x00000146   0x00000146   0x00000000   Code   RO         1317    .ARM.Collect$$libinit$$00000004  c_p.l(libinit2.o)
-    0x00000146   0x00000146   0x00000000   Code   RO         1319    .ARM.Collect$$libinit$$00000006  c_p.l(libinit2.o)
-    0x00000146   0x00000146   0x00000000   Code   RO         1322    .ARM.Collect$$libinit$$0000000C  c_p.l(libinit2.o)
-    0x00000146   0x00000146   0x00000000   Code   RO         1324    .ARM.Collect$$libinit$$0000000E  c_p.l(libinit2.o)
-    0x00000146   0x00000146   0x00000000   Code   RO         1326    .ARM.Collect$$libinit$$00000010  c_p.l(libinit2.o)
-    0x00000146   0x00000146   0x00000000   Code   RO         1329    .ARM.Collect$$libinit$$00000013  c_p.l(libinit2.o)
-    0x00000146   0x00000146   0x00000000   Code   RO         1331    .ARM.Collect$$libinit$$00000015  c_p.l(libinit2.o)
-    0x00000146   0x00000146   0x00000000   Code   RO         1333    .ARM.Collect$$libinit$$00000017  c_p.l(libinit2.o)
-    0x00000146   0x00000146   0x00000000   Code   RO         1335    .ARM.Collect$$libinit$$00000019  c_p.l(libinit2.o)
-    0x00000146   0x00000146   0x00000000   Code   RO         1337    .ARM.Collect$$libinit$$0000001B  c_p.l(libinit2.o)
-    0x00000146   0x00000146   0x00000000   Code   RO         1339    .ARM.Collect$$libinit$$0000001D  c_p.l(libinit2.o)
-    0x00000146   0x00000146   0x00000000   Code   RO         1341    .ARM.Collect$$libinit$$0000001F  c_p.l(libinit2.o)
-    0x00000146   0x00000146   0x00000000   Code   RO         1343    .ARM.Collect$$libinit$$00000021  c_p.l(libinit2.o)
-    0x00000146   0x00000146   0x00000000   Code   RO         1345    .ARM.Collect$$libinit$$00000023  c_p.l(libinit2.o)
-    0x00000146   0x00000146   0x00000000   Code   RO         1347    .ARM.Collect$$libinit$$00000025  c_p.l(libinit2.o)
-    0x00000146   0x00000146   0x00000000   Code   RO         1349    .ARM.Collect$$libinit$$00000027  c_p.l(libinit2.o)
-    0x00000146   0x00000146   0x00000000   Code   RO         1353    .ARM.Collect$$libinit$$0000002E  c_p.l(libinit2.o)
-    0x00000146   0x00000146   0x00000000   Code   RO         1355    .ARM.Collect$$libinit$$00000030  c_p.l(libinit2.o)
-    0x00000146   0x00000146   0x00000000   Code   RO         1357    .ARM.Collect$$libinit$$00000032  c_p.l(libinit2.o)
-    0x00000146   0x00000146   0x00000000   Code   RO         1359    .ARM.Collect$$libinit$$00000034  c_p.l(libinit2.o)
-    0x00000146   0x00000146   0x00000002   Code   RO         1360    .ARM.Collect$$libinit$$00000035  c_p.l(libinit2.o)
-    0x00000148   0x00000148   0x00000002   Code   RO         1395    .ARM.Collect$$libshutdown$$00000000  c_p.l(libshutdown.o)
-    0x0000014a   0x0000014a   0x00000000   Code   RO         1423    .ARM.Collect$$libshutdown$$00000002  c_p.l(libshutdown2.o)
-    0x0000014a   0x0000014a   0x00000000   Code   RO         1425    .ARM.Collect$$libshutdown$$00000004  c_p.l(libshutdown2.o)
-    0x0000014a   0x0000014a   0x00000000   Code   RO         1428    .ARM.Collect$$libshutdown$$00000007  c_p.l(libshutdown2.o)
-    0x0000014a   0x0000014a   0x00000000   Code   RO         1431    .ARM.Collect$$libshutdown$$0000000A  c_p.l(libshutdown2.o)
-    0x0000014a   0x0000014a   0x00000000   Code   RO         1433    .ARM.Collect$$libshutdown$$0000000C  c_p.l(libshutdown2.o)
-    0x0000014a   0x0000014a   0x00000000   Code   RO         1436    .ARM.Collect$$libshutdown$$0000000F  c_p.l(libshutdown2.o)
-    0x0000014a   0x0000014a   0x00000002   Code   RO         1437    .ARM.Collect$$libshutdown$$00000010  c_p.l(libshutdown2.o)
-    0x0000014c   0x0000014c   0x00000000   Code   RO         1265    .ARM.Collect$$rtentry$$00000000  c_p.l(__rtentry.o)
-    0x0000014c   0x0000014c   0x00000000   Code   RO         1271    .ARM.Collect$$rtentry$$00000002  c_p.l(__rtentry2.o)
-    0x0000014c   0x0000014c   0x00000006   Code   RO         1283    .ARM.Collect$$rtentry$$00000004  c_p.l(__rtentry4.o)
-    0x00000152   0x00000152   0x00000000   Code   RO         1273    .ARM.Collect$$rtentry$$00000009  c_p.l(__rtentry2.o)
-    0x00000152   0x00000152   0x00000004   Code   RO         1274    .ARM.Collect$$rtentry$$0000000A  c_p.l(__rtentry2.o)
-    0x00000156   0x00000156   0x00000000   Code   RO         1276    .ARM.Collect$$rtentry$$0000000C  c_p.l(__rtentry2.o)
-    0x00000156   0x00000156   0x00000008   Code   RO         1277    .ARM.Collect$$rtentry$$0000000D  c_p.l(__rtentry2.o)
-    0x0000015e   0x0000015e   0x00000002   Code   RO         1306    .ARM.Collect$$rtexit$$00000000  c_p.l(rtexit.o)
-    0x00000160   0x00000160   0x00000000   Code   RO         1366    .ARM.Collect$$rtexit$$00000002  c_p.l(rtexit2.o)
-    0x00000160   0x00000160   0x00000004   Code   RO         1367    .ARM.Collect$$rtexit$$00000003  c_p.l(rtexit2.o)
-    0x00000164   0x00000164   0x00000006   Code   RO         1368    .ARM.Collect$$rtexit$$00000004  c_p.l(rtexit2.o)
+    0x00000128   0x00000128   0x0000001c   Code   RO         1524    !!handler_zi        c_p.l(__scatter_zi.o)
+    0x00000144   0x00000144   0x00000002   Code   RO         1375    .ARM.Collect$$libinit$$00000000  c_p.l(libinit.o)
+    0x00000146   0x00000146   0x00000000   Code   RO         1393    .ARM.Collect$$libinit$$00000002  c_p.l(libinit2.o)
+    0x00000146   0x00000146   0x00000000   Code   RO         1395    .ARM.Collect$$libinit$$00000004  c_p.l(libinit2.o)
+    0x00000146   0x00000146   0x00000000   Code   RO         1397    .ARM.Collect$$libinit$$00000006  c_p.l(libinit2.o)
+    0x00000146   0x00000146   0x00000000   Code   RO         1400    .ARM.Collect$$libinit$$0000000C  c_p.l(libinit2.o)
+    0x00000146   0x00000146   0x00000000   Code   RO         1402    .ARM.Collect$$libinit$$0000000E  c_p.l(libinit2.o)
+    0x00000146   0x00000146   0x00000000   Code   RO         1404    .ARM.Collect$$libinit$$00000010  c_p.l(libinit2.o)
+    0x00000146   0x00000146   0x00000000   Code   RO         1407    .ARM.Collect$$libinit$$00000013  c_p.l(libinit2.o)
+    0x00000146   0x00000146   0x00000000   Code   RO         1409    .ARM.Collect$$libinit$$00000015  c_p.l(libinit2.o)
+    0x00000146   0x00000146   0x00000000   Code   RO         1411    .ARM.Collect$$libinit$$00000017  c_p.l(libinit2.o)
+    0x00000146   0x00000146   0x00000000   Code   RO         1413    .ARM.Collect$$libinit$$00000019  c_p.l(libinit2.o)
+    0x00000146   0x00000146   0x00000000   Code   RO         1415    .ARM.Collect$$libinit$$0000001B  c_p.l(libinit2.o)
+    0x00000146   0x00000146   0x00000000   Code   RO         1417    .ARM.Collect$$libinit$$0000001D  c_p.l(libinit2.o)
+    0x00000146   0x00000146   0x00000000   Code   RO         1419    .ARM.Collect$$libinit$$0000001F  c_p.l(libinit2.o)
+    0x00000146   0x00000146   0x00000000   Code   RO         1421    .ARM.Collect$$libinit$$00000021  c_p.l(libinit2.o)
+    0x00000146   0x00000146   0x00000000   Code   RO         1423    .ARM.Collect$$libinit$$00000023  c_p.l(libinit2.o)
+    0x00000146   0x00000146   0x00000000   Code   RO         1425    .ARM.Collect$$libinit$$00000025  c_p.l(libinit2.o)
+    0x00000146   0x00000146   0x00000000   Code   RO         1427    .ARM.Collect$$libinit$$00000027  c_p.l(libinit2.o)
+    0x00000146   0x00000146   0x00000000   Code   RO         1431    .ARM.Collect$$libinit$$0000002E  c_p.l(libinit2.o)
+    0x00000146   0x00000146   0x00000000   Code   RO         1433    .ARM.Collect$$libinit$$00000030  c_p.l(libinit2.o)
+    0x00000146   0x00000146   0x00000000   Code   RO         1435    .ARM.Collect$$libinit$$00000032  c_p.l(libinit2.o)
+    0x00000146   0x00000146   0x00000000   Code   RO         1437    .ARM.Collect$$libinit$$00000034  c_p.l(libinit2.o)
+    0x00000146   0x00000146   0x00000002   Code   RO         1438    .ARM.Collect$$libinit$$00000035  c_p.l(libinit2.o)
+    0x00000148   0x00000148   0x00000002   Code   RO         1475    .ARM.Collect$$libshutdown$$00000000  c_p.l(libshutdown.o)
+    0x0000014a   0x0000014a   0x00000000   Code   RO         1503    .ARM.Collect$$libshutdown$$00000002  c_p.l(libshutdown2.o)
+    0x0000014a   0x0000014a   0x00000000   Code   RO         1505    .ARM.Collect$$libshutdown$$00000004  c_p.l(libshutdown2.o)
+    0x0000014a   0x0000014a   0x00000000   Code   RO         1508    .ARM.Collect$$libshutdown$$00000007  c_p.l(libshutdown2.o)
+    0x0000014a   0x0000014a   0x00000000   Code   RO         1511    .ARM.Collect$$libshutdown$$0000000A  c_p.l(libshutdown2.o)
+    0x0000014a   0x0000014a   0x00000000   Code   RO         1513    .ARM.Collect$$libshutdown$$0000000C  c_p.l(libshutdown2.o)
+    0x0000014a   0x0000014a   0x00000000   Code   RO         1516    .ARM.Collect$$libshutdown$$0000000F  c_p.l(libshutdown2.o)
+    0x0000014a   0x0000014a   0x00000002   Code   RO         1517    .ARM.Collect$$libshutdown$$00000010  c_p.l(libshutdown2.o)
+    0x0000014c   0x0000014c   0x00000000   Code   RO         1330    .ARM.Collect$$rtentry$$00000000  c_p.l(__rtentry.o)
+    0x0000014c   0x0000014c   0x00000000   Code   RO         1343    .ARM.Collect$$rtentry$$00000002  c_p.l(__rtentry2.o)
+    0x0000014c   0x0000014c   0x00000006   Code   RO         1355    .ARM.Collect$$rtentry$$00000004  c_p.l(__rtentry4.o)
+    0x00000152   0x00000152   0x00000000   Code   RO         1345    .ARM.Collect$$rtentry$$00000009  c_p.l(__rtentry2.o)
+    0x00000152   0x00000152   0x00000004   Code   RO         1346    .ARM.Collect$$rtentry$$0000000A  c_p.l(__rtentry2.o)
+    0x00000156   0x00000156   0x00000000   Code   RO         1348    .ARM.Collect$$rtentry$$0000000C  c_p.l(__rtentry2.o)
+    0x00000156   0x00000156   0x00000008   Code   RO         1349    .ARM.Collect$$rtentry$$0000000D  c_p.l(__rtentry2.o)
+    0x0000015e   0x0000015e   0x00000002   Code   RO         1384    .ARM.Collect$$rtexit$$00000000  c_p.l(rtexit.o)
+    0x00000160   0x00000160   0x00000000   Code   RO         1446    .ARM.Collect$$rtexit$$00000002  c_p.l(rtexit2.o)
+    0x00000160   0x00000160   0x00000004   Code   RO         1447    .ARM.Collect$$rtexit$$00000003  c_p.l(rtexit2.o)
+    0x00000164   0x00000164   0x00000006   Code   RO         1448    .ARM.Collect$$rtexit$$00000004  c_p.l(rtexit2.o)
     0x0000016a   0x0000016a   0x00000002   PAD
-    0x0000016c   0x0000016c   0x0000002c   Code   RO         1249    .text               startup_mspm0g350x_uvision.o
-    0x00000198   0x00000198   0x00000006   Code   RO         1261    .text               c_p.l(heapauxi.o)
-    0x0000019e   0x0000019e   0x0000003e   Code   RO         1287    .text               c_p.l(sys_stackheap_outer.o)
-    0x000001dc   0x000001dc   0x00000010   Code   RO         1290    .text               c_p.l(exit.o)
-    0x000001ec   0x000001ec   0x00000008   Code   RO         1302    .text               c_p.l(libspace.o)
-    0x000001f4   0x000001f4   0x0000000c   Code   RO         1361    .text               c_p.l(sys_exit.o)
-    0x00000200   0x00000200   0x00000002   Code   RO         1384    .text               c_p.l(use_no_semi.o)
-    0x00000202   0x00000202   0x00000000   Code   RO         1386    .text               c_p.l(indicate_semi.o)
-    0x00000202   0x00000202   0x00000014   Code   RO          119    .text.DL_Common_delayCycles  dl_common.o
-    0x00000216   0x00000216   0x00000028   Code   RO           46    .text.DL_Common_updateReg  ti_msp_dl_config.o
-    0x0000023e   0x0000023e   0x00000014   Code   RO            4    .text.DL_GPIO_clearPins  main.o
+    0x0000016c   0x0000016c   0x0000002c   Code   RO         1185    .text               startup_mspm0g350x_uvision.o
+    0x00000198   0x00000198   0x00000006   Code   RO         1286    .text               c_p.l(heapauxi.o)
+    0x0000019e   0x0000019e   0x0000003e   Code   RO         1361    .text               c_p.l(sys_stackheap_outer.o)
+    0x000001dc   0x000001dc   0x00000010   Code   RO         1364    .text               c_p.l(exit.o)
+    0x000001ec   0x000001ec   0x00000008   Code   RO         1380    .text               c_p.l(libspace.o)
+    0x000001f4   0x000001f4   0x0000000c   Code   RO         1441    .text               c_p.l(sys_exit.o)
+    0x00000200   0x00000200   0x00000002   Code   RO         1464    .text               c_p.l(use_no_semi.o)
+    0x00000202   0x00000202   0x00000000   Code   RO         1466    .text               c_p.l(indicate_semi.o)
+    0x00000202   0x00000202   0x00000014   Code   RO           55    .text.DL_Common_delayCycles  dl_common.o
+    0x00000216   0x00000216   0x00000028   Code   RO         1272    .text.DL_Common_updateReg  ti_msp_dl_config.o
+    0x0000023e   0x0000023e   0x00000014   Code   RO         1230    .text.DL_GPIO_clearPins  main.o
     0x00000252   0x00000252   0x00000002   PAD
-    0x00000254   0x00000254   0x00000018   Code   RO           32    .text.DL_GPIO_enableOutput  ti_msp_dl_config.o
-    0x0000026c   0x0000026c   0x00000018   Code   RO           26    .text.DL_GPIO_enablePower  ti_msp_dl_config.o
-    0x00000284   0x00000284   0x00000018   Code   RO           28    .text.DL_GPIO_initDigitalOutput  ti_msp_dl_config.o
-    0x0000029c   0x0000029c   0x00000018   Code   RO           24    .text.DL_GPIO_reset  ti_msp_dl_config.o
-    0x000002b4   0x000002b4   0x00000014   Code   RO            6    .text.DL_GPIO_setPins  main.o
-    0x000002c8   0x000002c8   0x00000018   Code   RO           30    .text.DL_GPIO_setPins  ti_msp_dl_config.o
-    0x000002e0   0x000002e0   0x0000000c   Code   RO           38    .text.DL_SYSCTL_disableHFXT  ti_msp_dl_config.o
-    0x000002ec   0x000002ec   0x00000014   Code   RO           40    .text.DL_SYSCTL_disableSYSPLL  ti_msp_dl_config.o
-    0x00000300   0x00000300   0x00000018   Code   RO           34    .text.DL_SYSCTL_setBORThreshold  ti_msp_dl_config.o
-    0x00000318   0x00000318   0x00000018   Code   RO           44    .text.DL_SYSCTL_setMCLKDivider  ti_msp_dl_config.o
-    0x00000330   0x00000330   0x0000001c   Code   RO           36    .text.DL_SYSCTL_setSYSOSCFreq  ti_msp_dl_config.o
-    0x0000034c   0x0000034c   0x0000001c   Code   RO           42    .text.DL_SYSCTL_setULPCLKDivider  ti_msp_dl_config.o
-    0x00000368   0x00000368   0x00000024   Code   RO           20    .text.SYSCFG_DL_GPIO_init  ti_msp_dl_config.o
-    0x0000038c   0x0000038c   0x0000002a   Code   RO           22    .text.SYSCFG_DL_SYSCTL_init  ti_msp_dl_config.o
-    0x000003b6   0x000003b6   0x00000010   Code   RO           16    .text.SYSCFG_DL_init  ti_msp_dl_config.o
+    0x00000254   0x00000254   0x00000018   Code   RO         1258    .text.DL_GPIO_enableOutput  ti_msp_dl_config.o
+    0x0000026c   0x0000026c   0x00000018   Code   RO         1252    .text.DL_GPIO_enablePower  ti_msp_dl_config.o
+    0x00000284   0x00000284   0x00000018   Code   RO         1254    .text.DL_GPIO_initDigitalOutput  ti_msp_dl_config.o
+    0x0000029c   0x0000029c   0x00000018   Code   RO         1250    .text.DL_GPIO_reset  ti_msp_dl_config.o
+    0x000002b4   0x000002b4   0x00000014   Code   RO         1232    .text.DL_GPIO_setPins  main.o
+    0x000002c8   0x000002c8   0x00000018   Code   RO         1256    .text.DL_GPIO_setPins  ti_msp_dl_config.o
+    0x000002e0   0x000002e0   0x0000000c   Code   RO         1264    .text.DL_SYSCTL_disableHFXT  ti_msp_dl_config.o
+    0x000002ec   0x000002ec   0x00000014   Code   RO         1266    .text.DL_SYSCTL_disableSYSPLL  ti_msp_dl_config.o
+    0x00000300   0x00000300   0x00000018   Code   RO         1260    .text.DL_SYSCTL_setBORThreshold  ti_msp_dl_config.o
+    0x00000318   0x00000318   0x00000018   Code   RO         1270    .text.DL_SYSCTL_setMCLKDivider  ti_msp_dl_config.o
+    0x00000330   0x00000330   0x0000001c   Code   RO         1262    .text.DL_SYSCTL_setSYSOSCFreq  ti_msp_dl_config.o
+    0x0000034c   0x0000034c   0x0000001c   Code   RO         1268    .text.DL_SYSCTL_setULPCLKDivider  ti_msp_dl_config.o
+    0x00000368   0x00000368   0x00000024   Code   RO         1246    .text.SYSCFG_DL_GPIO_init  ti_msp_dl_config.o
+    0x0000038c   0x0000038c   0x0000002a   Code   RO         1248    .text.SYSCFG_DL_SYSCTL_init  ti_msp_dl_config.o
+    0x000003b6   0x000003b6   0x00000010   Code   RO         1242    .text.SYSCFG_DL_init  ti_msp_dl_config.o
     0x000003c6   0x000003c6   0x00000002   PAD
-    0x000003c8   0x000003c8   0x00000030   Code   RO           18    .text.SYSCFG_DL_initPower  ti_msp_dl_config.o
-    0x000003f8   0x000003f8   0x00000022   Code   RO           57    .text.delay_ms      delay.o
+    0x000003c8   0x000003c8   0x00000030   Code   RO         1244    .text.SYSCFG_DL_initPower  ti_msp_dl_config.o
+    0x000003f8   0x000003f8   0x00000022   Code   RO         1194    .text.delay_ms      delay.o
     0x0000041a   0x0000041a   0x00000002   PAD
-    0x0000041c   0x0000041c   0x00000038   Code   RO            2    .text.main          main.o
+    0x0000041c   0x0000041c   0x00000038   Code   RO         1228    .text.main          main.o
     0x00000454   0x00000454   0x00000004   PAD
-    0x00000458   0x00000458   0x00000010   Data   RO         1439    Region$$Table       anon$$obj.o
+    0x00000458   0x00000458   0x00000010   Data   RO         1519    Region$$Table       anon$$obj.o
 
 
     Execution Region RW_IRAM2 (Exec base: 0x20200000, Load base: 0x00000468, Size: 0x00000160, Max: 0x00008000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20200000        -       0x00000060   Zero   RW         1303    .bss                c_p.l(libspace.o)
-    0x20200060        -       0x00000000   Zero   RW         1247    HEAP                startup_mspm0g350x_uvision.o
-    0x20200060        -       0x00000100   Zero   RW         1246    STACK               startup_mspm0g350x_uvision.o
+    0x20200000        -       0x00000060   Zero   RW         1381    .bss                c_p.l(libspace.o)
+    0x20200060        -       0x00000000   Zero   RW         1183    HEAP                startup_mspm0g350x_uvision.o
+    0x20200060        -       0x00000100   Zero   RW         1182    STACK               startup_mspm0g350x_uvision.o
 
 
 

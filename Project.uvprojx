@@ -340,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define>__MSPM0G3507__</Define>
               <Undefine></Undefine>
-              <IncludePath>.\Source\inc;.\Source\inc\CMSIS;.\Source\src;.\User;.\Hardware;.\System</IncludePath>
+              <IncludePath>.\Source\inc;.\Source\inc\CMSIS;.\Source\src;.\User;.\Hardware;.\System;.\PID</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -381,49 +381,6 @@
         </TargetArmAds>
       </TargetOption>
       <Groups>
-        <Group>
-          <GroupName>User</GroupName>
-          <Files>
-            <File>
-              <FileName>main.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\User\main.c</FilePath>
-            </File>
-            <File>
-              <FileName>empty.syscfg</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\User\empty.syscfg</FilePath>
-            </File>
-            <File>
-              <FileName>ti_msp_dl_config.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\User\ti_msp_dl_config.c</FilePath>
-            </File>
-            <File>
-              <FileName>ti_msp_dl_config.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\User\ti_msp_dl_config.h</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>Hardware</GroupName>
-        </Group>
-        <Group>
-          <GroupName>System</GroupName>
-          <Files>
-            <File>
-              <FileName>Delay.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\System\Delay.c</FilePath>
-            </File>
-            <File>
-              <FileName>Delay.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\System\Delay.h</FilePath>
-            </File>
-          </Files>
-        </Group>
         <Group>
           <GroupName>Source</GroupName>
           <Files>
@@ -556,6 +513,64 @@
               <FileName>startup_mspm0g350x_uvision.s</FileName>
               <FileType>2</FileType>
               <FilePath>.\Start\startup_mspm0g350x_uvision.s</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>System</GroupName>
+          <Files>
+            <File>
+              <FileName>Delay.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\System\Delay.c</FilePath>
+            </File>
+            <File>
+              <FileName>Delay.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\System\Delay.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>PID</GroupName>
+          <Files>
+            <File>
+              <FileName>PID.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\PID\PID.c</FilePath>
+            </File>
+            <File>
+              <FileName>PID.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\PID\PID.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Hardware</GroupName>
+        </Group>
+        <Group>
+          <GroupName>User</GroupName>
+          <Files>
+            <File>
+              <FileName>main.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\User\main.c</FilePath>
+            </File>
+            <File>
+              <FileName>empty.syscfg</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\User\empty.syscfg</FilePath>
+            </File>
+            <File>
+              <FileName>ti_msp_dl_config.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\User\ti_msp_dl_config.c</FilePath>
+            </File>
+            <File>
+              <FileName>ti_msp_dl_config.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\User\ti_msp_dl_config.h</FilePath>
             </File>
           </Files>
         </Group>
