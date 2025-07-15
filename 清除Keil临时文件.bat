@@ -9,11 +9,9 @@ del *.crf /s
 del *.ddk /s
 del *.dep /s
 del *.edk /s
-del *.htm /s
 del *.iex /s
 del *.lnp /s
 del *.lst /s
-del *.map /s
 del *.mpf /s
 del *.mpj /s
 del *.obj /s

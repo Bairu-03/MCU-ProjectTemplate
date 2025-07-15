@@ -9,6 +9,7 @@
   */
 
 #include "OLED.h"
+#include "OLED_Font.h"
 
 /**
  * @brief  向OLED屏发送指令。
