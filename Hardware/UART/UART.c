@@ -1,4 +1,6 @@
-#include "USART.h"
+#include "UART.h"
+#include "stdarg.h"
+#include "stdio.h"
 
 /**
  * 串口接收状态标志。
@@ -20,7 +22,7 @@ uint8_t USART_RX_BUF[USART_REC_LEN];
  * @param  bound 串口波特率。
  * @retval 无
  */
-void UART_init(uint32_t bound)
+void UART_Init(uint32_t bound)
 {
     GPIO_InitTypeDef GPIO_InitStructure;
     USART_InitTypeDef USART_InitStructure;
@@ -65,7 +67,35 @@ void UART_init(uint32_t bound)
 void UART_SendData(uint16_t data)
 {
     USART_SendData(USART1, data);
-    while (USART_GetFlagStatus(USART1, USART_FLAG_TC) != SET); // 等待发送完成
+    while (USART_GetFlagStatus(USART1, USART_FLAG_TC) == RESET)
+        ; // 等待发送完成
+}
+
+/**
+ * @brief  UART格式化打印信息。
+ * @param  format 格式化字符串
+ * @retval 无
+ */
+void UART_printf(const char *format, ...)
+{
+    uint32_t length;
+    va_list args;
+    uint32_t i;
+    char TxBuffer[UART_SEND_LEN] = {0};
+
+    va_start(args, format);
+    length = vsprintf((char *)TxBuffer, (char *)format, args);
+    va_end(args);
+    for (i = 0; i < length; i++)
+    {
+        UART_SendData(TxBuffer[i]);
+        // 等待发送完成
+        while (USART_GetFlagStatus(USART1, USART_FLAG_TXE) == RESET)
+            ;
+    }
+    // 等待数据帧发送完成
+    while (USART_GetFlagStatus(USART1, USART_FLAG_TC) == RESET)
+        ;
 }
 
 /**
@@ -75,7 +105,7 @@ void UART_SendData(uint16_t data)
  *      - \b 1 : 接收完成
  *      - \b 0 : 接收未完成
  */
-uint8_t get_UART_RecStatus(void)
+uint8_t UART_GetRecStatus(void)
 {
     // 若USART_RX_STA最高位为1，接收完成
     return ((USART_RX_STA & 0x8000) ? 1 : 0);
@@ -86,7 +116,7 @@ uint8_t get_UART_RecStatus(void)
  * @param  无
  * @retval 数组长度值(uint16_t)
  */
-uint16_t get_UART_RecLength(void)
+uint16_t UART_GetRecLength(void)
 {
     return (uint16_t)(USART_RX_STA & 0x3FFF);
 }
@@ -96,7 +126,7 @@ uint16_t get_UART_RecLength(void)
  * @param  无
  * @retval 无
  */
-void Reset_UART_RecStatus(void)
+void UART_ResetRecStatus(void)
 {
     USART_RX_STA = 0;
 }
@@ -116,6 +146,7 @@ void USART1_IRQHandler(void)
                     USART_RX_STA = 0; // 接收错误,重新开始
                 else
                     USART_RX_STA |= 0x8000; // 接收完成
+                USART_RX_BUF[USART_RX_STA & 0X3FFF] = 0; // 补字符串结束符
             }
             else // 还没收到0X0d
             {

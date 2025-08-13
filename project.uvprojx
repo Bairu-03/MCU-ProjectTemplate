@@ -341,7 +341,7 @@
               <MiscControls></MiscControls>
               <Define>USE_STDPERIPH_DRIVER,STM32F10X_MD</Define>
               <Undefine></Undefine>
-              <IncludePath>.\Start;.\Library;.\System;.\User;.\PID;.\Hardware;.\Hardware\I2C_Software;.\Hardware\InfTrack;.\Hardware\Motor;.\Hardware\OLED;.\Hardware\PWM;.\Hardware\USART</IncludePath>
+              <IncludePath>.\Start;.\Library;.\System;.\User;.\PID;.\Hardware;.\Hardware\I2C_Software;.\Hardware\InfTrack;.\Hardware\Motor;.\Hardware\OLED;.\Hardware\PWM;.\Hardware\UART</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -471,14 +471,14 @@
               <FilePath>.\Hardware\PWM\PWM.h</FilePath>
             </File>
             <File>
-              <FileName>USART.c</FileName>
+              <FileName>UART.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Hardware\USART\USART.c</FilePath>
+              <FilePath>.\Hardware\UART\UART.c</FilePath>
             </File>
             <File>
-              <FileName>USART.h</FileName>
+              <FileName>UART.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\Hardware\USART\USART.h</FilePath>
+              <FilePath>.\Hardware\UART\UART.h</FilePath>
             </File>
           </Files>
         </Group>

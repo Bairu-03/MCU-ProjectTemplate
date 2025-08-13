@@ -1,12 +1,12 @@
 #include "stm32f10x.h"
 #include "delay.h"
 #include "OLED.h"
-#include "USART.h"
+#include "UART.h"
 
 int main(void)
 {
     OLED_Init();
-    UART_init(115200);
+    UART_Init(115200);
 
     OLED_ShowString(1, 1, " UART OLED TEST ", 8);
     OLED_ShowString(3, 1, "================", 8);
@@ -55,16 +55,16 @@ int main(void)
     while (1)
     {
         // 串口收发测试
-        if (get_UART_RecStatus())
+        if (UART_GetRecStatus())
         {
             uint8_t t;
             OLED_ClearLine(5, 6);
-            for (t = 0; t < get_UART_RecLength(); t++)
+            for (t = 0; t < UART_GetRecLength(); t++)
             {
                 UART_SendData(USART_RX_BUF[t]);
                 OLED_ShowChar(5, (t * 8 + 1), USART_RX_BUF[t], 8);
             }
-            Reset_UART_RecStatus();
+            UART_ResetRecStatus();
         }
     }
 }
