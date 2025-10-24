@@ -9,6 +9,8 @@
 #include "OLED.h"
 #include "OLED_Font.h"
 
+#define OLED_I2C_ADDR (0x78)
+
 static const OLED_I2C_t *OLED_I2C;
 
 /**
@@ -35,8 +37,8 @@ static uint32_t OLED_Pow(uint32_t X, uint32_t Y)
 void OLED_WriteCommand(uint8_t Command)
 {
     OLED_I2C->Start();
-    OLED_I2C->SendByte(0x78); // 从机地址
-    OLED_I2C->SendByte(0x00); // 写命令
+    OLED_I2C->SendAddr(OLED_I2C_ADDR); // 从机地址
+    OLED_I2C->SendByte(0x00);          // 写命令
     OLED_I2C->SendByte(Command);
     OLED_I2C->Stop();
 }
@@ -49,8 +51,8 @@ void OLED_WriteCommand(uint8_t Command)
 void OLED_WriteData(uint8_t Data)
 {
     OLED_I2C->Start();
-    OLED_I2C->SendByte(0x78); // 从机地址
-    OLED_I2C->SendByte(0x40); // 写数据
+    OLED_I2C->SendAddr(OLED_I2C_ADDR); // 从机地址
+    OLED_I2C->SendByte(0x40);          // 写数据
     OLED_I2C->SendByte(Data);
     OLED_I2C->Stop();
 }
@@ -360,7 +362,7 @@ void OLED_Start_Scroll(void)
 /**
  * @brief  OLED初始化。
  * @param  I2C_interface I2C回调函数结构体.
- *         需实现`I2C_Start`, `I2C_Stop`, `I2C_SendByte`函数.
+ *         需实现`I2C_Start`, `I2C_SendAddr`, `I2C_SendByte`, `I2C_Stop`函数.
  * @retval 无
  */
 void OLED_Init(const OLED_I2C_t *I2C_interface)

@@ -27,13 +27,15 @@
 
 /* I2C通信接口 ----------------------------------------------------------- ----*/
 typedef void (*func_I2C_StartStop_t)(void);
-typedef void (*func_I2C_SendByte_t)(uint8_t);
+typedef void (*func_I2C_SendByteAddr_t)(uint8_t);
 
+// I2C接口函数指针
 typedef struct
 {
-    func_I2C_StartStop_t Start;
-    func_I2C_StartStop_t Stop;
-    func_I2C_SendByte_t SendByte;
+    func_I2C_StartStop_t Start;       // I2C产生起始信号, 函数格式: void I2C_Start(void)
+    func_I2C_SendByteAddr_t SendAddr; // I2C发送从机地址, 函数格式: void I2C_SendAddr(uint8_t)
+    func_I2C_SendByteAddr_t SendByte; // I2C发送数据, 函数格式: void I2C_SendByte(uint8_t)
+    func_I2C_StartStop_t Stop;        // I2C产生停止信号, 函数格式: void I2C_Stop(void)
 } OLED_I2C_t;
 
 /* 参数定义 -------------------------------------------------------------------*/

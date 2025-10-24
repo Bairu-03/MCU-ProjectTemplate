@@ -1,16 +1,26 @@
 #include "stm32f10x.h"
 #include "delay.h"
-#include "I2C_Software.h"
+// #include "I2C_Software.h"
+#include "I2C_Hardware.h"
 #include "OLED.h"
 #include "UART.h"
 
 int main(void)
 {
-    I2C_Sim_Init();
+    // I2C_SW_Init();
+    // OLED_I2C_t OLED_I2C = {
+    //     .Start = I2C_SW_Start,
+    //     .SendAddr = I2C_SW_SendByte,
+    //     .SendByte = I2C_SW_SendByte,
+    //     .Stop = I2C_SW_Stop,
+    // };
+
+    I2C_HW_Init();
     OLED_I2C_t OLED_I2C = {
-        .Start = I2C_Sim_Start,
-        .SendByte = I2C_Sim_SendByte,
-        .Stop = I2C_Sim_Stop,
+        .Start = I2C_HW_Start,
+        .SendAddr = I2C_HW_SendAddr,
+        .SendByte = I2C_HW_SendByte,
+        .Stop = I2C_HW_Stop,
     };
 
     OLED_Init(&OLED_I2C);
@@ -22,7 +32,7 @@ int main(void)
     OLED_ShowString(1, 1, " UART OLED TEST ", 8);
     OLED_ShowString(3, 1, "================", 8);
 
-    Delay_ms(1000);
+    Delay_ms(500);
 
     /* 设置OLED反显 */
     OLED_SetDisplayMode(NEGATIVE_MODE);
@@ -47,7 +57,11 @@ int main(void)
     /* 第一行文字向右上方滚动 */
     OLED_Scroll_VH(1, 16, ScrH_ON, ScrVR, 1, 2, 1, 128, 1, OLED_ScrSpeed5);
 
-    Delay_ms(500);
+    Delay_ms(3000);
+
+    OLED_Stop_Scroll();
+    OLED_ClearLine(1, 2);
+    OLED_ShowString(1, 1, " UART OLED TEST ", 8);
 
     /* 模拟进度条加载 */
     int i;
@@ -61,11 +75,7 @@ int main(void)
     }
     OLED_ShowString(5, 1, "     FINISH     ", 8);
 
-    Delay_ms(1000);
-
-    OLED_Stop_Scroll();
-    OLED_ClearLine(1, 2);
-    OLED_ShowString(1, 1, " UART OLED TEST ", 8);
+    Delay_ms(500);
 
     OLED_ClearLine(5, 6);
 

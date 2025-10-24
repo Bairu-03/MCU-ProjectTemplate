@@ -341,7 +341,7 @@
               <MiscControls></MiscControls>
               <Define>USE_STDPERIPH_DRIVER,STM32F10X_MD</Define>
               <Undefine></Undefine>
-              <IncludePath>.\Start;.\Library;.\System;.\User;.\PID;.\Hardware;.\Hardware\I2C_Software;.\Hardware\InfTrack;.\Hardware\Motor;.\Hardware\OLED;.\Hardware\PWM;.\Hardware\UART</IncludePath>
+              <IncludePath>.\Start;.\Library;.\System;.\User;.\PID;.\Hardware;.\Hardware\I2C_Software;.\Hardware\I2C_Hardware;.\Hardware\InfTrack;.\Hardware\Motor;.\Hardware\OLED;.\Hardware\PWM;.\Hardware\UART</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -419,6 +419,16 @@
               <FileName>I2C_Software.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Hardware\I2C_Software\I2C_Software.h</FilePath>
+            </File>
+            <File>
+              <FileName>I2C_Hardware.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Hardware\I2C_Hardware\I2C_Hardware.c</FilePath>
+            </File>
+            <File>
+              <FileName>I2C_Hardware.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Hardware\I2C_Hardware\I2C_Hardware.h</FilePath>
             </File>
             <File>
               <FileName>InfTrack.c</FileName>
