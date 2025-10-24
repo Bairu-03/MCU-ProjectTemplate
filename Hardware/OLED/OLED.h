@@ -28,6 +28,15 @@
 #error "Need to specify a unique OLED driver chip! See Line 19-25 of the OLED.H file."
 #endif
 
+/* I2C通信接口 -------------------------------------------------------------------*/
+typedef void (*func_I2C_StartStop_t)(void);
+typedef void (*func_I2C_SendByte_t)(uint8_t);
+
+typedef struct {
+    func_I2C_StartStop_t Start;
+    func_I2C_StartStop_t Stop;
+    func_I2C_SendByte_t Send_Byte;
+} I2C_t;
 
 /* 参数定义 ----------------------------------------------------------------------*/
 // 屏幕测试模式开启/关闭
@@ -138,6 +147,6 @@ void OLED_ShowCN(uint8_t Line, uint8_t Column, uint8_t Num); // 在指定位置�
 void OLED_DrawBMP(uint8_t LineS, uint8_t LineE,
                   uint8_t ColumnS, uint8_t ColumnE, uint8_t BMP[]); // 在指定位置显示一个BMP图片。
 
-void OLED_Init(void); // 初始化OLED屏幕。
+void OLED_Init(I2C_t* I2C_interface); // 初始化OLED屏幕。
 
 #endif /* __OLED_H */

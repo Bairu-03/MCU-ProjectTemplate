@@ -11,6 +11,8 @@
 #include "OLED.h"
 #include "OLED_Font.h"
 
+static const I2C_t* I2C;
+
 /**
  * @brief  向OLED屏发送指令。
  * @param  Command 要写入的指令。
@@ -18,11 +20,11 @@
  */
 void OLED_WriteCommand(uint8_t Command)
 {
-    Sim_I2C_Start();
-    I2C_Send_Byte(0x78); // 从机地址
-    I2C_Send_Byte(0x00); // 写命令
-    I2C_Send_Byte(Command);
-    Sim_I2C_Stop();
+    I2C->Start();
+    I2C->Send_Byte(0x78); // 从机地址
+    I2C->Send_Byte(0x00); // 写命令
+    I2C->Send_Byte(Command);
+    I2C->Stop();
 }
 
 /**
@@ -32,11 +34,11 @@ void OLED_WriteCommand(uint8_t Command)
  */
 void OLED_WriteData(uint8_t Data)
 {
-    Sim_I2C_Start();
-    I2C_Send_Byte(0x78); // 从机地址
-    I2C_Send_Byte(0x40); // 写数据
-    I2C_Send_Byte(Data);
-    Sim_I2C_Stop();
+    I2C->Start();
+    I2C->Send_Byte(0x78); // 从机地址
+    I2C->Send_Byte(0x40); // 写数据
+    I2C->Send_Byte(Data);
+    I2C->Stop();
 }
 
 /**
@@ -360,14 +362,14 @@ uint32_t OLED_Pow(uint32_t X, uint32_t Y)
 /**
  * @brief  OLED初始化。
  *      PB9 - SDA | PB8 - SCL
- * @param  无
+ * @param  I2C_interface I2C接口, 需实现Start, Stop, Send_Byte函数
  * @retval 无
  */
-void OLED_Init(void)
+void OLED_Init(I2C_t* I2C_interface)
 {
     OLED_delay(); // 上电延时
 
-    Sim_I2C_Init(); // 端口初始化
+    I2C = I2C_interface; // 配置I2C接口
 
     OLED_WriteCommand(0xAE); // 关闭显示
 
