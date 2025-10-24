@@ -1,21 +1,18 @@
-/**
-  *****************************************************************************
-  * @file    OLED.h
-  * @version v1.3.2
-  * @author  Bairu
-  * @date    2024年10月07日 00:30:51
-  * @brief   STM32 OLED屏幕驱动程序头文件，包含参数定义及OLED.c内所有函数声明
-  *****************************************************************************
-  */
+/*******************************************************************************
+ * @file    OLED.h
+ * @version v1.4.0
+ * @author  Bairu
+ * @date    2025年10月25日 00:27:01
+ * @brief   0.96inch OLED屏幕驱动程序头文件(I2C通信)
+ ******************************************************************************/
 
 #ifndef __OLED_H
 #define __OLED_H
 
 #include "stm32f10x.h"
-#include "I2C_Software.h"
 #include "stdint.h"
 
-/* 指定OLED驱动芯片型号 --------------------------------------------------------------*/
+/* 指定OLED驱动芯片型号 --------------------------------------------------------*/
 /**
  * @note 不同型号的芯片对垂直滚动显示功能的支持情况不同。
  *      根据OLED模块实际使用的芯片型号选择一个宏定义即可。
@@ -25,20 +22,21 @@
 
 // 若没有正确指定OLED驱动芯片则触发编译错误
 #if (defined(OLED_SSD1315) && defined(OLED_SSD1306)) || (!defined(OLED_SSD1315) && !defined(OLED_SSD1306))
-#error "Need to specify a unique OLED driver chip! See Line 19-25 of the OLED.H file."
+#error "Need to specify a unique OLED driver chip! See Line 15-21 of the OLED.h file."
 #endif
 
-/* I2C通信接口 -------------------------------------------------------------------*/
+/* I2C通信接口 ----------------------------------------------------------- ----*/
 typedef void (*func_I2C_StartStop_t)(void);
 typedef void (*func_I2C_SendByte_t)(uint8_t);
 
-typedef struct {
+typedef struct
+{
     func_I2C_StartStop_t Start;
     func_I2C_StartStop_t Stop;
-    func_I2C_SendByte_t Send_Byte;
-} I2C_t;
+    func_I2C_SendByte_t SendByte;
+} OLED_I2C_t;
 
-/* 参数定义 ----------------------------------------------------------------------*/
+/* 参数定义 -------------------------------------------------------------------*/
 // 屏幕测试模式开启/关闭
 typedef enum
 {
@@ -87,10 +85,9 @@ typedef enum
     OLED_ScrSpeed8 = 0x07  // 快 - 2帧
 } OLED_ScrSpeed;
 
-
-/* 函数声明 ----------------------------------------------------------------------*/
-void OLED_WriteCommand(uint8_t Command);           // 向OLED屏发送指令。
-void OLED_WriteData(uint8_t Data);                 // 向OLED屏发送数据。
+/* 函数声明 -------------------------------------------------------------------*/
+void OLED_WriteCommand(uint8_t Command); // 向OLED屏发送指令。
+void OLED_WriteData(uint8_t Data);       // 向OLED屏发送数据。
 
 void OLED_SetCursor(uint8_t Line, uint8_t Column); // 设置屏幕显示起始坐标。
 void OLED_Display_Off(void);                       // 关闭OLED屏幕显示。
@@ -119,8 +116,6 @@ void OLED_Scroll_VH(OLED_ScrVerHorDir ScrVLR, uint8_t LineS, uint8_t LineE,
 void OLED_Stop_Scroll(void);  // 停止OLED屏幕连续水平滚动。
 void OLED_Start_Scroll(void); // 启用OLED屏幕连续水平滚动。
 
-uint32_t OLED_Pow(uint32_t X, uint32_t Y);
-
 void OLED_ShowChar(uint8_t Line, uint8_t Column,
                    int8_t Char, uint8_t Size); // 在指定位置显示一个字符。
 
@@ -147,6 +142,6 @@ void OLED_ShowCN(uint8_t Line, uint8_t Column, uint8_t Num); // 在指定位置�
 void OLED_DrawBMP(uint8_t LineS, uint8_t LineE,
                   uint8_t ColumnS, uint8_t ColumnE, uint8_t BMP[]); // 在指定位置显示一个BMP图片。
 
-void OLED_Init(I2C_t* I2C_interface); // 初始化OLED屏幕。
+void OLED_Init(const OLED_I2C_t *I2C_interface); // 初始化OLED屏幕。
 
 #endif /* __OLED_H */

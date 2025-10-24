@@ -2,10 +2,12 @@
 
 /**
  * @brief  模拟I2C信号IO口初始化。
+ * @note   SCL: PB8
+ * @note   SDA: PB9
  * @param  无
  * @retval 无
  */
-void Sim_I2C_Init(void)
+void I2C_Sim_Init(void)
 {
     RCC_APB2PeriphClockCmd(APB2_GPIO, ENABLE);
 
@@ -28,7 +30,7 @@ void Sim_I2C_Init(void)
  * @param  无
  * @retval 无
  */
-void Sim_I2C_Start(void)
+void I2C_Sim_Start(void)
 {
     OLED_W_SDA(1);
     OLED_W_SCL(1);
@@ -41,7 +43,7 @@ void Sim_I2C_Start(void)
  * @param  无
  * @retval 无
  */
-void Sim_I2C_Stop(void)
+void I2C_Sim_Stop(void)
 {
     OLED_W_SDA(0);
     OLED_W_SCL(1);
@@ -53,7 +55,7 @@ void Sim_I2C_Stop(void)
  * @param  无
  * @retval 从机应答状态，I2C_NO_ACK: 无应答，I2C_ACK: 应答。
  */
-uint8_t I2C_Wait_Ack(void)
+uint8_t I2C_Sim_WaitAck(void)
 {
     uint8_t ack;
     OLED_W_SCL(0);
@@ -77,7 +79,7 @@ uint8_t I2C_Wait_Ack(void)
  *      - \b I2C_NO_ACK: 不发送应答信号
  * @retval 无
  */
-void I2C_Send_Ack(uint8_t ack)
+void I2C_Sim_SendAck(uint8_t ack)
 {
     OLED_W_SCL(0);
 
@@ -98,7 +100,7 @@ void I2C_Send_Ack(uint8_t ack)
  *      - \b I2C_NO_ACK: 不发送应答信号
  * @retval data 读取到的数据
  */
-uint8_t I2C_Read_Byte(uint8_t ack)
+uint8_t I2C_Sim_ReadByte(uint8_t ack)
 {
     uint8_t data = 0;
     uint8_t i;
@@ -116,7 +118,7 @@ uint8_t I2C_Read_Byte(uint8_t ack)
 
         OLED_W_SCL(0);
     }
-    I2C_Send_Ack(ack);
+    I2C_Sim_SendAck(ack);
     return data;
 }
 
@@ -125,7 +127,7 @@ uint8_t I2C_Read_Byte(uint8_t ack)
  * @param  Byte  要发送的一个字节。
  * @retval 无
  */
-void I2C_Send_Byte(uint8_t Byte)
+void I2C_Sim_SendByte(uint8_t Byte)
 {
     uint8_t i;
     for (i = 0; i < 8; i++)
@@ -135,7 +137,7 @@ void I2C_Send_Byte(uint8_t Byte)
         OLED_W_SCL(0);
     }
 
-    // while(I2C_Wait_Ack());    //等待从机应答信号
+    // while(I2C_Sim_WaitAck());    //等待从机应答信号
 
     OLED_W_SCL(1); // 变化时钟信号，不等待从机应答
     OLED_W_SCL(0);

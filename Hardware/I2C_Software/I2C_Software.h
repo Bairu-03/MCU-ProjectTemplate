@@ -16,13 +16,12 @@
 #define OLED_W_SCL(x) GPIO_WriteBit(GPIOX, SCL_Pin, (BitAction)(x))
 #define OLED_W_SDA(x) GPIO_WriteBit(GPIOX, SDA_Pin, (BitAction)(x))
 
-
-void Sim_I2C_Init(void);            // 初始化模拟I2C引脚。
-void Sim_I2C_Start(void);           // 模拟I2C起始信号。
-void Sim_I2C_Stop(void);            // 模拟I2C停止信号。
-uint8_t I2C_Wait_Ack(void);         // 等待从机应答信号。
-void I2C_Send_Ack(uint8_t ack);     // 发送应答信号。
-uint8_t I2C_Read_Byte(uint8_t ack); // I2C读取一个字节。
-void I2C_Send_Byte(uint8_t Byte);   // I2C发送一个字节。
+void I2C_Sim_Init(void);               // 初始化模拟I2C引脚。
+void I2C_Sim_Start(void);              // 模拟I2C起始信号。
+void I2C_Sim_Stop(void);               // 模拟I2C停止信号。
+uint8_t I2C_Sim_WaitAck(void);         // 等待从机应答信号。
+void I2C_Sim_SendAck(uint8_t ack);     // 发送应答信号。
+uint8_t I2C_Sim_ReadByte(uint8_t ack); // I2C读取一个字节。
+void I2C_Sim_SendByte(uint8_t Byte);   // I2C发送一个字节。
 
 #endif /* __I2C_SOFTWARE_H */

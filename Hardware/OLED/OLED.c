@@ -1,17 +1,31 @@
-/**
-  *****************************************************************************
-  * @file    OLED.c
-  * @version v1.3.2
-  * @author  Bairu
-  * @date    2024年10月07日 00:30:17
-  * @brief   STM32 OLED屏幕驱动程序(SSD1306或SSD1315, I2C)
-  *****************************************************************************
-  */
+/*******************************************************************************
+ * @file    OLED.c
+ * @version v1.4.0
+ * @author  Bairu
+ * @date    2025年10月25日 00:30:09
+ * @brief   0.96inch OLED屏幕驱动程序(I2C通信)
+ ******************************************************************************/
 
 #include "OLED.h"
 #include "OLED_Font.h"
 
-static const I2C_t* I2C;
+static const OLED_I2C_t *OLED_I2C;
+
+/**
+ * @brief  计算x^y。
+ * @param  X 无符号整形数。
+ * @param  Y 无符号整形数。
+ * @retval Result X的Y次方
+ */
+static uint32_t OLED_Pow(uint32_t X, uint32_t Y)
+{
+    uint32_t Result = 1;
+    while (Y--)
+    {
+        Result *= X;
+    }
+    return Result;
+}
 
 /**
  * @brief  向OLED屏发送指令。
@@ -20,11 +34,11 @@ static const I2C_t* I2C;
  */
 void OLED_WriteCommand(uint8_t Command)
 {
-    I2C->Start();
-    I2C->Send_Byte(0x78); // 从机地址
-    I2C->Send_Byte(0x00); // 写命令
-    I2C->Send_Byte(Command);
-    I2C->Stop();
+    OLED_I2C->Start();
+    OLED_I2C->SendByte(0x78); // 从机地址
+    OLED_I2C->SendByte(0x00); // 写命令
+    OLED_I2C->SendByte(Command);
+    OLED_I2C->Stop();
 }
 
 /**
@@ -34,11 +48,11 @@ void OLED_WriteCommand(uint8_t Command)
  */
 void OLED_WriteData(uint8_t Data)
 {
-    I2C->Start();
-    I2C->Send_Byte(0x78); // 从机地址
-    I2C->Send_Byte(0x40); // 写数据
-    I2C->Send_Byte(Data);
-    I2C->Stop();
+    OLED_I2C->Start();
+    OLED_I2C->SendByte(0x78); // 从机地址
+    OLED_I2C->SendByte(0x40); // 写数据
+    OLED_I2C->SendByte(Data);
+    OLED_I2C->Stop();
 }
 
 /**
@@ -122,7 +136,7 @@ void OLED_SetDisplayMode(OLED_DisplayMode mode)
 
 /**
  * @brief  OLED测试模式/正常模式。
- *      注：切换到测试模式不会破坏原有数据，且此模式仍可传输显示数据，待退出测试模式后会正常显示。
+ * @note   切换到测试模式不会破坏原有显示数据，且测试模式下仍可传输新的显示数据，待退出测试模式后会正常显示。
  * @param  cmd 指定模式。
  *     @arg 有效取值:
  *      - \b TEST_ON : 测试模式（屏幕全亮，忽略显示数据）
@@ -176,8 +190,8 @@ void OLED_ClearLine(uint8_t LineS, uint8_t LineE)
 
 /**
  * @brief  设置屏幕内容连续水平滚动。
- *      注意：调用本函数后，若要更新显示数据必须先停止滚动，数据全部传输完成后再启动滚动，否则极易显示乱码。
- *      推荐顺序：调用OLED_Stop_Scroll -> 传输显示数据 -> 调用OLED_Start_Scroll
+ * @warning 调用本函数后，若要更新显示数据必须先停止滚动，数据全部传输完成后再启动滚动，否则极易显示乱码。
+ *          推荐顺序：调用`OLED_Stop_Scroll` -> 传输显示数据 -> 调用`OLED_Start_Scroll`
  * @param  ScrLR 滚动方向。
  *     @arg 有效取值:
  *      - \b ScrL : 向左滚动
@@ -216,8 +230,8 @@ void OLED_Scroll_H(OLED_ScrHorDir ScrLR, uint8_t LineS, uint8_t LineE, OLED_ScrS
 #ifdef OLED_SSD1315
 /**
  * @brief  设置屏幕内容连续垂直和水平滚动。
- *      注意：调用本函数后，若要更新显示数据必须先停止滚动，数据全部传输完成后再启动滚动，否则极易显示乱码。
- *      推荐顺序：调用OLED_Stop_Scroll -> 传输显示数据 -> 调用OLED_Start_Scroll
+ * @warning 调用本函数后，若要更新显示数据必须先停止滚动，数据全部传输完成后再启动滚动，否则极易显示乱码。
+ *          推荐顺序：调用`OLED_Stop_Scroll` -> 传输显示数据 -> 调用`OLED_Start_Scroll`
  * @param  PixLineS 垂直滚动起始像素行。
  *     @arg 有效取值: 1 - 64
  * @param  PixLineNum 执行垂直滚动的像素行数。
@@ -276,8 +290,8 @@ void OLED_Scroll_VH(uint8_t PixLineS, uint8_t PixLineNum,
 #elif defined(OLED_SSD1306)
 /**
  * @brief  设置屏幕内容连续垂直和水平滚动。要实现仅垂直滚动，将LineS和LineE都设为1即可。
- *      注意：调用本函数后，若要更新显示数据必须先停止滚动，数据全部传输完成后再启动滚动，否则极易显示乱码。
- *      推荐顺序：调用OLED_Stop_Scroll -> 传输显示数据 -> 调用OLED_Start_Scroll
+ * @warning 调用本函数后，若要更新显示数据必须先停止滚动，数据全部传输完成后再启动滚动，否则极易显示乱码。
+ *          推荐顺序：调用`OLED_Stop_Scroll` -> 传输显示数据 -> 调用`OLED_Start_Scroll`
  * @param  ScrVLR 水平滚动方向。
  *     @arg 有效取值:
  *      - \b ScrVL : 垂直+向左滚动
@@ -344,32 +358,16 @@ void OLED_Start_Scroll(void)
 }
 
 /**
- * @brief  计算x^y。
- * @param  X 无符号整形数。
- * @param  Y 无符号整形数。
- * @retval Result X的Y次方
- */
-uint32_t OLED_Pow(uint32_t X, uint32_t Y)
-{
-    uint32_t Result = 1;
-    while (Y--)
-    {
-        Result *= X;
-    }
-    return Result;
-}
-
-/**
  * @brief  OLED初始化。
- *      PB9 - SDA | PB8 - SCL
- * @param  I2C_interface I2C接口, 需实现Start, Stop, Send_Byte函数
+ * @param  I2C_interface I2C回调函数结构体.
+ *         需实现`I2C_Start`, `I2C_Stop`, `I2C_SendByte`函数.
  * @retval 无
  */
-void OLED_Init(I2C_t* I2C_interface)
+void OLED_Init(const OLED_I2C_t *I2C_interface)
 {
     OLED_delay(); // 上电延时
 
-    I2C = I2C_interface; // 配置I2C接口
+    OLED_I2C = I2C_interface; // 配置I2C接口
 
     OLED_WriteCommand(0xAE); // 关闭显示
 
@@ -629,12 +627,12 @@ void OLED_ShowCN(uint8_t Line, uint8_t Column, uint8_t Num)
     OLED_SetCursor(Line - 1, Column - 1); // 参数1:把光标设置在第几行. 参数2:把光标设置在第几列
     for (i = 0; i < wide; i++)
     {
-        OLED_WriteData(OLED_HzK[Num][i]); // 显示上半部分内容
+        OLED_WriteData(OLED_Chinese[Num][i]); // 显示上半部分内容
     }
     OLED_SetCursor((Line - 1) + 1, Column - 1);
     for (i = 0; i < wide; i++)
     {
-        OLED_WriteData(OLED_HzK[Num][i + wide]); // 显示下半部分内容
+        OLED_WriteData(OLED_Chinese[Num][i + wide]); // 显示下半部分内容
     }
 }
 
