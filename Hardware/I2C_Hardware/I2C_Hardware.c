@@ -1,7 +1,7 @@
 #include "I2C_Hardware.h"
 
 /**
- * @brief  模拟I2C信号IO口初始化。
+ * @brief  硬件I2C初始化。
  * @note   SCL: PB10
  * @note   SDA: PB11
  * @param  无
