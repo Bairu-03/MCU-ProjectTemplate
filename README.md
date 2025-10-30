@@ -16,3 +16,10 @@
 ### 2025.10.31
 - 从CCS环境迁移到IAR环境
 - 上传技术文档
+
+---
+
+Tips: IAR EW for MSP430下载链接: 
+- 官方直链: [EW430-8103.exe](https://netstorage.iar.com/FileStore/STANDARD/001/002/712/EW430-8103.exe)
+- 网盘: [EW430-8103.exe](https://pan.baidu.com/s/1NJP3qV7QZwXI3SJ-VgM48g?pwd=8k6t) 提取码: 8k6t
+- patch: [IARActivator.rar](https://pan.baidu.com/s/1-k_NQdSjFgD4ExOt7MH4Qw?pwd=iih6) 提取码: iih6
