@@ -1,0 +1,8 @@
+.vscode/
+/Build/Debug/
+Build/path.txt
+
+*.Debug.general.xcl
+*.Debug.driver.xcl
+*.Debug.cspy.ps1
+*.Debug.cspy.bat
