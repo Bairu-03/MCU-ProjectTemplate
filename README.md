@@ -23,3 +23,8 @@
   - 链接:
     - [Gitee: MCU-ProjectTemplate/MSP430](https://gitee.com/Bairu-03/MCU-ProjectTemplate/tree/MSP430)
     - [GitHub: MCU-ProjectTemplate/MSP430](https://github.com/Bairu-03/MCU-ProjectTemplate/tree/MSP430)
+- `STM8L`分支
+  - `STM8L152`工程模板
+  - 链接:
+    - [Gitee: MCU-ProjectTemplate/STM8L](https://gitee.com/Bairu-03/MCU-ProjectTemplate/tree/STM8L)
+    - [GitHub: MCU-ProjectTemplate/STM8L](https://github.com/Bairu-03/MCU-ProjectTemplate/tree/STM8L)
