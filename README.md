@@ -9,22 +9,27 @@
     - [Gitee: MCU-ProjectTemplate/main](https://gitee.com/Bairu-03/MCU-ProjectTemplate)
     - [GitHub: MCU-ProjectTemplate/main](https://github.com/Bairu-03/MCU-ProjectTemplate)
 - `STM32`分支
-  - `STM32F103`工程模板
+  - `STM32F103`Keil工程模板
   - 链接:
     - [Gitee: MCU-ProjectTemplate/STM32](https://gitee.com/Bairu-03/MCU-ProjectTemplate/tree/STM32)
     - [GitHub: MCU-ProjectTemplate/STM32](https://github.com/Bairu-03/MCU-ProjectTemplate/tree/STM32)
 - `MSPM0`分支
-  - `MSPM0G3507`工程模板
+  - `MSPM0G3507`Keil工程模板
   - 链接:
     - [Gitee: MCU-ProjectTemplate/MSPM0](https://gitee.com/Bairu-03/MCU-ProjectTemplate/tree/MSPM0)
     - [GitHub: MCU-ProjectTemplate/MSPM0](https://github.com/Bairu-03/MCU-ProjectTemplate/tree/MSPM0)
 - `MSP430`分支
-  - `MSP430F5529`工程模板
+  - `MSP430F5529`IAR工程模板
   - 链接:
     - [Gitee: MCU-ProjectTemplate/MSP430](https://gitee.com/Bairu-03/MCU-ProjectTemplate/tree/MSP430)
     - [GitHub: MCU-ProjectTemplate/MSP430](https://github.com/Bairu-03/MCU-ProjectTemplate/tree/MSP430)
 - `STM8L`分支
-  - `STM8L152`工程模板
+  - `STM8L152`IAR工程模板
   - 链接:
     - [Gitee: MCU-ProjectTemplate/STM8L](https://gitee.com/Bairu-03/MCU-ProjectTemplate/tree/STM8L)
     - [GitHub: MCU-ProjectTemplate/STM8L](https://github.com/Bairu-03/MCU-ProjectTemplate/tree/STM8L)
+- ~~`ESP32`分支~~（即将更新...）
+  - ~~`ESP32S3`ESP-IDF工程模板~~
+  - ~~链接:~~
+    - ~~[Gitee: MCU-ProjectTemplate/ESP32](https://gitee.com/Bairu-03/MCU-ProjectTemplate/tree/ESP32)~~
+    - ~~[GitHub: MCU-ProjectTemplate/ESP32](https://github.com/Bairu-03/MCU-ProjectTemplate/tree/ESP32)~~
